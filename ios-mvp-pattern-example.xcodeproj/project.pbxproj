@@ -12,8 +12,20 @@
 		00850E64211CF6B200A16FA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00850E62211CF6B200A16FA4 /* Main.storyboard */; };
 		00850E66211CF6B300A16FA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00850E65211CF6B300A16FA4 /* Assets.xcassets */; };
 		00850E69211CF6B300A16FA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00850E67211CF6B300A16FA4 /* LaunchScreen.storyboard */; };
+		00850E77211CFA3500A16FA4 /* ios_mvp_pattern_exampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00850E76211CFA3500A16FA4 /* ios_mvp_pattern_exampleTests.swift */; };
 		8397E5EDB13E440F8A2D7557 /* Pods_ios_mvp_pattern_example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C49B5B1401ADBBA3B042E6 /* Pods_ios_mvp_pattern_example.framework */; };
+		DAA1F58E165715C9E136AF67 /* Pods_ios_mvp_pattern_exampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E2C1FF29CEF585A41B07728 /* Pods_ios_mvp_pattern_exampleTests.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00850E79211CFA3500A16FA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00850E53211CF6B200A16FA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00850E5A211CF6B200A16FA4;
+			remoteInfo = "ios-mvp-pattern-example";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		00850E5B211CF6B200A16FA4 /* ios-mvp-pattern-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-mvp-pattern-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -23,9 +35,15 @@
 		00850E65211CF6B300A16FA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00850E68211CF6B300A16FA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00850E6A211CF6B300A16FA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00850E74211CFA3500A16FA4 /* ios-mvp-pattern-exampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-mvp-pattern-exampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00850E76211CFA3500A16FA4 /* ios_mvp_pattern_exampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_mvp_pattern_exampleTests.swift; sourceTree = "<group>"; };
+		00850E78211CFA3500A16FA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21DCCA5A87AAE2F0EE58757E /* Pods-ios-mvp-pattern-exampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-mvp-pattern-exampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-mvp-pattern-exampleTests/Pods-ios-mvp-pattern-exampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		48C49B5B1401ADBBA3B042E6 /* Pods_ios_mvp_pattern_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_mvp_pattern_example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		857FADF8DC565FDB762A5A81 /* Pods-ios-mvp-pattern-example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-mvp-pattern-example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-mvp-pattern-example/Pods-ios-mvp-pattern-example.release.xcconfig"; sourceTree = "<group>"; };
+		8E2C1FF29CEF585A41B07728 /* Pods_ios_mvp_pattern_exampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_mvp_pattern_exampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D902FBE2CAF9CA76B26C2B46 /* Pods-ios-mvp-pattern-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-mvp-pattern-example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-mvp-pattern-example/Pods-ios-mvp-pattern-example.debug.xcconfig"; sourceTree = "<group>"; };
+		ECD29619194534CBAE3A6366 /* Pods-ios-mvp-pattern-exampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-mvp-pattern-exampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-mvp-pattern-exampleTests/Pods-ios-mvp-pattern-exampleTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +55,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		00850E71211CFA3500A16FA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAA1F58E165715C9E136AF67 /* Pods_ios_mvp_pattern_exampleTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -44,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				00850E5D211CF6B200A16FA4 /* ios-mvp-pattern-example */,
+				00850E75211CFA3500A16FA4 /* ios-mvp-pattern-exampleTests */,
 				00850E5C211CF6B200A16FA4 /* Products */,
 				5AEAB6CF6159E863A3D401FE /* Pods */,
 				C715DA7369A0595C31837413 /* Frameworks */,
@@ -54,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				00850E5B211CF6B200A16FA4 /* ios-mvp-pattern-example.app */,
+				00850E74211CFA3500A16FA4 /* ios-mvp-pattern-exampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,11 +99,22 @@
 			path = "ios-mvp-pattern-example";
 			sourceTree = "<group>";
 		};
+		00850E75211CFA3500A16FA4 /* ios-mvp-pattern-exampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				00850E76211CFA3500A16FA4 /* ios_mvp_pattern_exampleTests.swift */,
+				00850E78211CFA3500A16FA4 /* Info.plist */,
+			);
+			path = "ios-mvp-pattern-exampleTests";
+			sourceTree = "<group>";
+		};
 		5AEAB6CF6159E863A3D401FE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				D902FBE2CAF9CA76B26C2B46 /* Pods-ios-mvp-pattern-example.debug.xcconfig */,
 				857FADF8DC565FDB762A5A81 /* Pods-ios-mvp-pattern-example.release.xcconfig */,
+				21DCCA5A87AAE2F0EE58757E /* Pods-ios-mvp-pattern-exampleTests.debug.xcconfig */,
+				ECD29619194534CBAE3A6366 /* Pods-ios-mvp-pattern-exampleTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -84,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				48C49B5B1401ADBBA3B042E6 /* Pods_ios_mvp_pattern_example.framework */,
+				8E2C1FF29CEF585A41B07728 /* Pods_ios_mvp_pattern_exampleTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -110,6 +150,26 @@
 			productReference = 00850E5B211CF6B200A16FA4 /* ios-mvp-pattern-example.app */;
 			productType = "com.apple.product-type.application";
 		};
+		00850E73211CFA3500A16FA4 /* ios-mvp-pattern-exampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00850E7D211CFA3500A16FA4 /* Build configuration list for PBXNativeTarget "ios-mvp-pattern-exampleTests" */;
+			buildPhases = (
+				0E4579EB2B09A043971A5AF2 /* [CP] Check Pods Manifest.lock */,
+				00850E70211CFA3500A16FA4 /* Sources */,
+				00850E71211CFA3500A16FA4 /* Frameworks */,
+				00850E72211CFA3500A16FA4 /* Resources */,
+				127F16399156EC117E3FF5D7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00850E7A211CFA3500A16FA4 /* PBXTargetDependency */,
+			);
+			name = "ios-mvp-pattern-exampleTests";
+			productName = "ios-mvp-pattern-exampleTests";
+			productReference = 00850E74211CFA3500A16FA4 /* ios-mvp-pattern-exampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -122,6 +182,10 @@
 				TargetAttributes = {
 					00850E5A211CF6B200A16FA4 = {
 						CreatedOnToolsVersion = 9.4.1;
+					};
+					00850E73211CFA3500A16FA4 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 00850E5A211CF6B200A16FA4;
 					};
 				};
 			};
@@ -139,6 +203,7 @@
 			projectRoot = "";
 			targets = (
 				00850E5A211CF6B200A16FA4 /* ios-mvp-pattern-example */,
+				00850E73211CFA3500A16FA4 /* ios-mvp-pattern-exampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -154,9 +219,56 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		00850E72211CFA3500A16FA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0E4579EB2B09A043971A5AF2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ios-mvp-pattern-exampleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		127F16399156EC117E3FF5D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ios-mvp-pattern-exampleTests/Pods-ios-mvp-pattern-exampleTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-mvp-pattern-exampleTests/Pods-ios-mvp-pattern-exampleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5DE989136E3C2479944256E0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -209,7 +321,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		00850E70211CFA3500A16FA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00850E77211CFA3500A16FA4 /* ios_mvp_pattern_exampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00850E7A211CFA3500A16FA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00850E5A211CF6B200A16FA4 /* ios-mvp-pattern-example */;
+			targetProxy = 00850E79211CFA3500A16FA4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		00850E62211CF6B200A16FA4 /* Main.storyboard */ = {
@@ -385,6 +513,48 @@
 			};
 			name = Release;
 		};
+		00850E7B211CFA3500A16FA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21DCCA5A87AAE2F0EE58757E /* Pods-ios-mvp-pattern-exampleTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KPHPLU45VB;
+				INFOPLIST_FILE = "ios-mvp-pattern-exampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pio.ios-mvp-pattern-exampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-mvp-pattern-example.app/ios-mvp-pattern-example";
+			};
+			name = Debug;
+		};
+		00850E7C211CFA3500A16FA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECD29619194534CBAE3A6366 /* Pods-ios-mvp-pattern-exampleTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KPHPLU45VB;
+				INFOPLIST_FILE = "ios-mvp-pattern-exampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pio.ios-mvp-pattern-exampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-mvp-pattern-example.app/ios-mvp-pattern-example";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -402,6 +572,15 @@
 			buildConfigurations = (
 				00850E6E211CF6B300A16FA4 /* Debug */,
 				00850E6F211CF6B300A16FA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00850E7D211CFA3500A16FA4 /* Build configuration list for PBXNativeTarget "ios-mvp-pattern-exampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00850E7B211CFA3500A16FA4 /* Debug */,
+				00850E7C211CFA3500A16FA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

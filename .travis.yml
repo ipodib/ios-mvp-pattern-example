@@ -1,0 +1,4 @@
+language: swift
+osx_image: xcode9.4
+script:
+    - xcodebuild -workspace ios-mvp-pattern-example.xcworkspace -scheme ios-mvp-pattern-exampleTests -sdk iphonesimulator -destination platform="iOS Simulator,name=iPhone 8,OS=11.4" test
