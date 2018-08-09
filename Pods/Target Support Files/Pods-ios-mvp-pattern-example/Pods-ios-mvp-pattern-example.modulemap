@@ -1,0 +1,6 @@
+framework module Pods_ios_mvp_pattern_example {
+  umbrella header "Pods-ios-mvp-pattern-example-umbrella.h"
+
+  export *
+  module * { export * }
+}
