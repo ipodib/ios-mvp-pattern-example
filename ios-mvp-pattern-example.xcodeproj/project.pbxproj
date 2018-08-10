@@ -13,6 +13,14 @@
 		00850E66211CF6B300A16FA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00850E65211CF6B300A16FA4 /* Assets.xcassets */; };
 		00850E69211CF6B300A16FA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00850E67211CF6B300A16FA4 /* LaunchScreen.storyboard */; };
 		00850E77211CFA3500A16FA4 /* ios_mvp_pattern_exampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00850E76211CFA3500A16FA4 /* ios_mvp_pattern_exampleTests.swift */; };
+		00850E87211E324300A16FA4 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00850E82211E324300A16FA4 /* DataProvider.swift */; };
+		00850E88211E324300A16FA4 /* CacheRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00850E83211E324300A16FA4 /* CacheRequests.swift */; };
+		00850E89211E324300A16FA4 /* ApiRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00850E85211E324300A16FA4 /* ApiRouterProtocol.swift */; };
+		00850E8C211E362600A16FA4 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00850E8B211E362600A16FA4 /* SearchRouter.swift */; };
+		00850E8E211E3AB400A16FA4 /* SearchDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00850E8D211E3AB400A16FA4 /* SearchDataProvider.swift */; };
+		00850E91211E3AEE00A16FA4 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00850E90211E3AEE00A16FA4 /* Movie.swift */; };
+		00850E93211E3E4200A16FA4 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00850E92211E3E4200A16FA4 /* SearchResult.swift */; };
+		00850E96211E419F00A16FA4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00850E95211E419F00A16FA4 /* Constants.swift */; };
 		8397E5EDB13E440F8A2D7557 /* Pods_ios_mvp_pattern_example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C49B5B1401ADBBA3B042E6 /* Pods_ios_mvp_pattern_example.framework */; };
 		DAA1F58E165715C9E136AF67 /* Pods_ios_mvp_pattern_exampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E2C1FF29CEF585A41B07728 /* Pods_ios_mvp_pattern_exampleTests.framework */; };
 /* End PBXBuildFile section */
@@ -38,6 +46,14 @@
 		00850E74211CFA3500A16FA4 /* ios-mvp-pattern-exampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-mvp-pattern-exampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00850E76211CFA3500A16FA4 /* ios_mvp_pattern_exampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_mvp_pattern_exampleTests.swift; sourceTree = "<group>"; };
 		00850E78211CFA3500A16FA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00850E82211E324300A16FA4 /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		00850E83211E324300A16FA4 /* CacheRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheRequests.swift; sourceTree = "<group>"; };
+		00850E85211E324300A16FA4 /* ApiRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRouterProtocol.swift; sourceTree = "<group>"; };
+		00850E8B211E362600A16FA4 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		00850E8D211E3AB400A16FA4 /* SearchDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataProvider.swift; sourceTree = "<group>"; };
+		00850E90211E3AEE00A16FA4 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		00850E92211E3E4200A16FA4 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		00850E95211E419F00A16FA4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		21DCCA5A87AAE2F0EE58757E /* Pods-ios-mvp-pattern-exampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-mvp-pattern-exampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-mvp-pattern-exampleTests/Pods-ios-mvp-pattern-exampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		48C49B5B1401ADBBA3B042E6 /* Pods_ios_mvp_pattern_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_mvp_pattern_example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		857FADF8DC565FDB762A5A81 /* Pods-ios-mvp-pattern-example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-mvp-pattern-example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-mvp-pattern-example/Pods-ios-mvp-pattern-example.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +105,8 @@
 		00850E5D211CF6B200A16FA4 /* ios-mvp-pattern-example */ = {
 			isa = PBXGroup;
 			children = (
+				00850E94211E419200A16FA4 /* Constants */,
+				00850E7E211E320200A16FA4 /* Network */,
 				00850E5E211CF6B200A16FA4 /* AppDelegate.swift */,
 				00850E60211CF6B200A16FA4 /* ViewController.swift */,
 				00850E62211CF6B200A16FA4 /* Main.storyboard */,
@@ -106,6 +124,60 @@
 				00850E78211CFA3500A16FA4 /* Info.plist */,
 			);
 			path = "ios-mvp-pattern-exampleTests";
+			sourceTree = "<group>";
+		};
+		00850E7E211E320200A16FA4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				00850E8F211E3ACE00A16FA4 /* Models */,
+				00850E7F211E324300A16FA4 /* Provider */,
+				00850E84211E324300A16FA4 /* Routers */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		00850E7F211E324300A16FA4 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				00850E80211E324300A16FA4 /* Base */,
+				00850E8D211E3AB400A16FA4 /* SearchDataProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		00850E80211E324300A16FA4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				00850E82211E324300A16FA4 /* DataProvider.swift */,
+				00850E83211E324300A16FA4 /* CacheRequests.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		00850E84211E324300A16FA4 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				00850E85211E324300A16FA4 /* ApiRouterProtocol.swift */,
+				00850E8B211E362600A16FA4 /* SearchRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		00850E8F211E3ACE00A16FA4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				00850E90211E3AEE00A16FA4 /* Movie.swift */,
+				00850E92211E3E4200A16FA4 /* SearchResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		00850E94211E419200A16FA4 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				00850E95211E419F00A16FA4 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		5AEAB6CF6159E863A3D401FE /* Pods */ = {
@@ -317,6 +389,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				00850E61211CF6B200A16FA4 /* ViewController.swift in Sources */,
+				00850E93211E3E4200A16FA4 /* SearchResult.swift in Sources */,
+				00850E8E211E3AB400A16FA4 /* SearchDataProvider.swift in Sources */,
+				00850E87211E324300A16FA4 /* DataProvider.swift in Sources */,
+				00850E8C211E362600A16FA4 /* SearchRouter.swift in Sources */,
+				00850E96211E419F00A16FA4 /* Constants.swift in Sources */,
+				00850E89211E324300A16FA4 /* ApiRouterProtocol.swift in Sources */,
+				00850E88211E324300A16FA4 /* CacheRequests.swift in Sources */,
+				00850E91211E3AEE00A16FA4 /* Movie.swift in Sources */,
 				00850E5F211CF6B200A16FA4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
