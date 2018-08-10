@@ -3,7 +3,7 @@
 //  home-assitant
 //
 //  Created by Ivan Podibka on 2/4/17.
-//  Copyright © 2017 Home Assistant. All rights reserved.
+//  Copyright © 2017 Ivan Podibka. All rights reserved.
 //
 
 import Foundation
