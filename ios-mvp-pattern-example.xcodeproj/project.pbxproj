@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00668E10211FD71D009DE8A2 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00668E0F211FD71D009DE8A2 /* SearchTableViewController.swift */; };
+		00668E13211FD908009DE8A2 /* SearchContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00668E12211FD908009DE8A2 /* SearchContract.swift */; };
+		00668E16211FD95E009DE8A2 /* BasePresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00668E15211FD95E009DE8A2 /* BasePresenterImpl.swift */; };
+		00668E18211FD9AF009DE8A2 /* BaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00668E17211FD9AF009DE8A2 /* BaseContract.swift */; };
+		00668E1A211FDA3F009DE8A2 /* SearchPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00668E19211FDA3F009DE8A2 /* SearchPresenterImpl.swift */; };
+		00668E1D211FE68D009DE8A2 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00668E1C211FE68D009DE8A2 /* SearchResultTableViewCell.swift */; };
 		00850E5F211CF6B200A16FA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00850E5E211CF6B200A16FA4 /* AppDelegate.swift */; };
-		00850E61211CF6B200A16FA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00850E60211CF6B200A16FA4 /* ViewController.swift */; };
 		00850E64211CF6B200A16FA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00850E62211CF6B200A16FA4 /* Main.storyboard */; };
 		00850E66211CF6B300A16FA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00850E65211CF6B300A16FA4 /* Assets.xcassets */; };
 		00850E69211CF6B300A16FA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00850E67211CF6B300A16FA4 /* LaunchScreen.storyboard */; };
@@ -36,9 +41,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00668E0F211FD71D009DE8A2 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		00668E12211FD908009DE8A2 /* SearchContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContract.swift; sourceTree = "<group>"; };
+		00668E15211FD95E009DE8A2 /* BasePresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenterImpl.swift; sourceTree = "<group>"; };
+		00668E17211FD9AF009DE8A2 /* BaseContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseContract.swift; sourceTree = "<group>"; };
+		00668E19211FDA3F009DE8A2 /* SearchPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterImpl.swift; sourceTree = "<group>"; };
+		00668E1C211FE68D009DE8A2 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
 		00850E5B211CF6B200A16FA4 /* ios-mvp-pattern-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-mvp-pattern-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00850E5E211CF6B200A16FA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		00850E60211CF6B200A16FA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		00850E63211CF6B200A16FA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		00850E65211CF6B300A16FA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00850E68211CF6B300A16FA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -82,6 +92,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00668E0D211FD6F9009DE8A2 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				00668E14211FD955009DE8A2 /* Base */,
+				00668E0E211FD707009DE8A2 /* Search */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		00668E0E211FD707009DE8A2 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				00668E1B211FE66B009DE8A2 /* Table View Cells */,
+				00668E0F211FD71D009DE8A2 /* SearchTableViewController.swift */,
+				00668E12211FD908009DE8A2 /* SearchContract.swift */,
+				00668E19211FDA3F009DE8A2 /* SearchPresenterImpl.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		00668E14211FD955009DE8A2 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				00668E15211FD95E009DE8A2 /* BasePresenterImpl.swift */,
+				00668E17211FD9AF009DE8A2 /* BaseContract.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		00668E1B211FE66B009DE8A2 /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				00668E1C211FE68D009DE8A2 /* SearchResultTableViewCell.swift */,
+			);
+			path = "Table View Cells";
+			sourceTree = "<group>";
+		};
 		00850E52211CF6B200A16FA4 = {
 			isa = PBXGroup;
 			children = (
@@ -107,8 +154,8 @@
 			children = (
 				00850E94211E419200A16FA4 /* Constants */,
 				00850E7E211E320200A16FA4 /* Network */,
+				00668E0D211FD6F9009DE8A2 /* Presentation */,
 				00850E5E211CF6B200A16FA4 /* AppDelegate.swift */,
-				00850E60211CF6B200A16FA4 /* ViewController.swift */,
 				00850E62211CF6B200A16FA4 /* Main.storyboard */,
 				00850E65211CF6B300A16FA4 /* Assets.xcassets */,
 				00850E67211CF6B300A16FA4 /* LaunchScreen.storyboard */,
@@ -388,16 +435,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00850E61211CF6B200A16FA4 /* ViewController.swift in Sources */,
 				00850E93211E3E4200A16FA4 /* SearchResult.swift in Sources */,
+				00668E16211FD95E009DE8A2 /* BasePresenterImpl.swift in Sources */,
 				00850E8E211E3AB400A16FA4 /* SearchDataProvider.swift in Sources */,
 				00850E87211E324300A16FA4 /* DataProvider.swift in Sources */,
+				00668E1A211FDA3F009DE8A2 /* SearchPresenterImpl.swift in Sources */,
 				00850E8C211E362600A16FA4 /* SearchRouter.swift in Sources */,
 				00850E96211E419F00A16FA4 /* Constants.swift in Sources */,
 				00850E89211E324300A16FA4 /* ApiRouterProtocol.swift in Sources */,
+				00668E18211FD9AF009DE8A2 /* BaseContract.swift in Sources */,
 				00850E88211E324300A16FA4 /* CacheRequests.swift in Sources */,
+				00668E10211FD71D009DE8A2 /* SearchTableViewController.swift in Sources */,
+				00668E1D211FE68D009DE8A2 /* SearchResultTableViewCell.swift in Sources */,
 				00850E91211E3AEE00A16FA4 /* Movie.swift in Sources */,
 				00850E5F211CF6B200A16FA4 /* AppDelegate.swift in Sources */,
+				00668E13211FD908009DE8A2 /* SearchContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,7 +613,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KPHPLU45VB;
 				INFOPLIST_FILE = "ios-mvp-pattern-example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -581,7 +633,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KPHPLU45VB;
 				INFOPLIST_FILE = "ios-mvp-pattern-example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

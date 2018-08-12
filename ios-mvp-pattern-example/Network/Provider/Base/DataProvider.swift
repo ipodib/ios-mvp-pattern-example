@@ -1,6 +1,6 @@
 //
 //  ServerDataProvider.swift
-//  home-assitant
+//  ios-mvp-pattern-example
 //
 //  Created by Ivan Podibka on 11/8/16.
 //  Copyright © 2018 Ivan Podbika. All rights reserved.
