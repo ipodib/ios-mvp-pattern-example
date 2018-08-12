@@ -1,6 +1,6 @@
 //
 //  CacheRequests.swift
-//  home-assitant
+//  ios-mvp-pattern-example
 //
 //  Created by Ivan Podibka on 2/4/17.
 //  Copyright © 2018 Ivan Podbika. All rights reserved.
