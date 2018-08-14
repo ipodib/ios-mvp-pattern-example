@@ -83,11 +83,25 @@ private extension URLRequest {
     
     mutating func appendApiKey() {
         if let url = self.url {
-            let queryItem = URLQueryItem(name: "api_key", value: Constants.API.apiKey)
-            var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false)
-            urlComponents?.queryItems?.append(queryItem)
-            self.url = urlComponents?.url
+            self.url = url.appendingApiKey()
         }
+    }
+    
+}
+
+private extension URL {
+    
+    func appendingApiKey() -> URL? {
+        let queryItem = URLQueryItem(name: "api_key", value: Constants.API.apiKey)
+        var urlComponents = URLComponents(url: self, resolvingAgainstBaseURL: false)
+        
+        if urlComponents?.queryItems?.isEmpty ?? true {
+            urlComponents?.queryItems = [queryItem]
+        } else {
+            urlComponents?.queryItems?.append(queryItem)
+        }
+            
+        return urlComponents?.url
     }
     
 }

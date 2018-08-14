@@ -9,6 +9,7 @@ def import_common_pods
     
     pod 'Alamofire', '~> 4.7'
     pod 'AlamofireObjectMapper', '~> 5.0'
+    pod 'Kingfisher', '~> 4.0'
     
 end
 
