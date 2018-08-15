@@ -32,6 +32,17 @@ class SearchTableViewController: UITableViewController {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let selection = tableView.indexPathForSelectedRow else {
+            return
+        }
+        
+        if let id = movies[selection.row].id, segue.identifier == "showMovieDetailsSegue" {
+            let viewController = segue.destination as? MovieDetailsTableViewController
+            viewController?.movieId = id
+        }
+    }
+    
     private func configureSearchController() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false

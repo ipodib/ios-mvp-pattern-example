@@ -86,6 +86,7 @@
                                     <outlet property="descriptionLabel" destination="q5B-Ul-bxk" id="hYP-Ff-ccG"/>
                                     <outlet property="posterImageView" destination="v7X-md-NJQ" id="yoD-D2-GPS"/>
                                     <outlet property="titleLabel" destination="q2b-xw-SBh" id="I0V-Wo-Lo9"/>
+                                    <segue destination="4nC-VU-Jhl" kind="show" identifier="showMovieDetailsSegue" id="P4U-cW-Dk4"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -102,6 +103,29 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nNB-a6-kEt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1916" y="144.3778110944528"/>
+        </scene>
+        <!--Details-->
+        <scene sceneID="EfZ-zl-aQQ">
+            <objects>
+                <tableViewController title="Details" id="4nC-VU-Jhl" customClass="MovieDetailsTableViewController" customModule="ios_mvp_pattern_example" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8ol-Xl-Z0y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="P11-7f-Gp3">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <connections>
+                            <outlet property="dataSource" destination="4nC-VU-Jhl" id="YY2-0T-Hxw"/>
+                            <outlet property="delegate" destination="4nC-VU-Jhl" id="2xM-qg-7Tw"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="atN-GC-zDZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2751" y="144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c9G-j3-xpK">
