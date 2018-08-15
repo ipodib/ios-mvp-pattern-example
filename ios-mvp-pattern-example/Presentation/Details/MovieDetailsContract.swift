@@ -10,14 +10,19 @@ import Foundation
 
 protocol MovieDetailsView: BaseView {
     
+    /// Display loading indicator.
     func displayLoadingProgress()
     
+    /// Hide progress indicator.
     func hideLoadingProgress()
+    
+    func display(items: [MovieDetailsItem])
     
 }
 
 protocol MovieDetailsPresenter {
  
+    /// Initate loading movie details.
     func loadMovieDetails()
     
 }

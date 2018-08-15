@@ -58,6 +58,7 @@ class MovieDetails: Mappable {
         productionCountries <- map["production_countries"]
         releaseDate <- map["release_date"]
         revenue <- map["revenue"]
+        runtime <- map["runtime"]
         spokenLanguages <- map["spoken_languages"]
         status <- map["status"]
         tagline <- map["tagline"]

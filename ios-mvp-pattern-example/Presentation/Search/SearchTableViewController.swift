@@ -33,7 +33,7 @@ class SearchTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let selection = tableView.indexPathForSelectedRow else {
+        guard let selection = tableView.indexPathsForSelectedRows?.first else {
             return
         }
         

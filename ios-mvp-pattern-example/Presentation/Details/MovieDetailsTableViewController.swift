@@ -14,6 +14,7 @@ class MovieDetailsTableViewController: UITableViewController {
     
     private var presenter: MovieDetailsPresenter?
     private var activituIndicator: UIActivityIndicatorView?
+    private var items = [MovieDetailsItem]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +27,23 @@ class MovieDetailsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.items.count
+    }
+    
+    // MARK: - Table view delegate
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let item = items[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: item.cellIdentifier, for: indexPath)
+        if let cell = cell as? ConfigurableTableViewCell {
+            cell.configure(item)
+        }
+        return cell
     }
     
     private func configureView() {
@@ -51,5 +63,10 @@ extension MovieDetailsTableViewController: MovieDetailsView {
     
     func hideLoadingProgress() {
         activituIndicator?.isHidden = true
+    }
+    
+    func display(items: [MovieDetailsItem]) {
+        self.items = items
+        tableView.reloadData()
     }
 }
