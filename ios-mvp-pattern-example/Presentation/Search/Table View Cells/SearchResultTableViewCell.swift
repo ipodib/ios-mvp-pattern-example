@@ -20,18 +20,11 @@ class SearchResultTableViewCell: UITableViewCell {
     func configure(with movie: Movie) {
         titleLabel.text = movie.title
         descriptionLabel.text = movie.overview
-        loadImage(for: movie)
-        
+        posterImageView.loadPoster(with: movie.posterPath)
     }
     
     override func prepareForReuse() {
         posterImageView.image = nil
     }
     
-    private func loadImage(for movie: Movie) {
-        let dataStore = LocalDataStore()
-        if let url = dataStore.apiConfig?.images?.secureBaseUrl, let path = movie.posterPath {
-            posterImageView.kf.setImage(with: url.appendingPosterPath(path, quality: .medium))
-        }
-    }
 }

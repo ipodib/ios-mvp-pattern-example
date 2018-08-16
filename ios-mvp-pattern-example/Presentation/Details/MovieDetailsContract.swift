@@ -16,7 +16,10 @@ protocol MovieDetailsView: BaseView {
     /// Hide progress indicator.
     func hideLoadingProgress()
     
-    func display(items: [MovieDetailsItem])
+    /// Display movie details sections.
+    ///
+    /// - Parameter sections: List of sections with items.
+    func display(sections: [TableViewSection])
     
 }
 

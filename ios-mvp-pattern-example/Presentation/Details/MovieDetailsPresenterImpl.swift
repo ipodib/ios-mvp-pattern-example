@@ -12,10 +12,12 @@ class MovieDetailsPresenterImpl<T: MovieDetailsView>: BasePresenterImpl<T>, Movi
     
     private let dataProvider: MoviesDataProvider
     private let movieId: Int
+    private let detailsGenerator: MovieDetailsCellItemGenerator
     
     init(_ view: T, _ dataProvider: MoviesDataProvider, _ movieId: Int) {
         self.dataProvider = dataProvider
         self.movieId = movieId
+        self.detailsGenerator = MovieDetailsCellItemGenerator()
         super.init(view)
     }
     
@@ -27,7 +29,7 @@ class MovieDetailsPresenterImpl<T: MovieDetailsView>: BasePresenterImpl<T>, Movi
     private func movieDetailsLoaded(_ details: MovieDetails?, _ error: Error?) {
         view?.hideLoadingProgress()
         if let details = details {
-            view?.display(items: [GeneralMovieDetailsItem(details)])
+            view?.display(sections: detailsGenerator.generate(from: details))
         }
         
     }

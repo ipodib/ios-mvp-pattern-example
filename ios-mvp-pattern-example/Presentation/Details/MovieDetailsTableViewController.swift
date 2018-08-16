@@ -14,7 +14,7 @@ class MovieDetailsTableViewController: UITableViewController {
     
     private var presenter: MovieDetailsPresenter?
     private var activituIndicator: UIActivityIndicatorView?
-    private var items = [MovieDetailsItem]()
+    private var sections = [TableViewSection]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,18 +27,21 @@ class MovieDetailsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return sections.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return self.items.count
+        return sections[section].items.count
     }
     
     // MARK: - Table view delegate
     
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sections[section].name
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item = items[indexPath.row]
+        let item = sections[indexPath.section].items[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: item.cellIdentifier, for: indexPath)
         if let cell = cell as? ConfigurableTableViewCell {
             cell.configure(item)
@@ -65,8 +68,8 @@ extension MovieDetailsTableViewController: MovieDetailsView {
         activituIndicator?.isHidden = true
     }
     
-    func display(items: [MovieDetailsItem]) {
-        self.items = items
+    func display(sections: [TableViewSection]) {
+        self.sections = sections
         tableView.reloadData()
     }
 }

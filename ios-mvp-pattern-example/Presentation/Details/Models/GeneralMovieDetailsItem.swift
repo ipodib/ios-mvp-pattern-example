@@ -8,7 +8,7 @@
 
 import Foundation
 
-class GeneralMovieDetailsItem: MovieDetailsItem {
+class GeneralMovieDetailsItem: TableViewCellItem {
 
     var posterPath: String?
     var title: String?
@@ -18,20 +18,20 @@ class GeneralMovieDetailsItem: MovieDetailsItem {
     var rating: String?
     
     var cellIdentifier: String {
-        return "GeneralMovieDetailsTableViewCell"
+        return GeneralMovieDetailsTableViewCell.cellIdentifier
     }
     
-    required init(_ details: MovieDetails) {
-        posterPath = details.posterPath
-        title = details.originalTitle
-        releaseDate = details.releaseDate
-        language = details.originalLanguage
+    required init(_ data: MovieDetails) {
+        posterPath = data.posterPath
+        title = data.originalTitle
+        releaseDate = data.releaseDate
+        language = data.originalLanguage
         
-        if let runtime = details.runtime {
+        if let runtime = data.runtime {
             duration = "\(runtime) min"
         }
         
-        if let voteAverage = details.voteAverage {
+        if let voteAverage = data.voteAverage {
             rating = "\(voteAverage)/10"
         }
     }

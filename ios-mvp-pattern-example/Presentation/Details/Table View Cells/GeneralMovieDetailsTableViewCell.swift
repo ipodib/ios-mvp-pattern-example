@@ -10,6 +10,8 @@ import UIKit
 
 class GeneralMovieDetailsTableViewCell: UITableViewCell, ConfigurableTableViewCell {
     
+    static let cellIdentifier = "GeneralMovieDetailsTableViewCell"
+    
     @IBOutlet private weak var posterImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var durationLabel: UILabel!
@@ -17,7 +19,11 @@ class GeneralMovieDetailsTableViewCell: UITableViewCell, ConfigurableTableViewCe
     @IBOutlet private weak var languageLabel: UILabel!
     @IBOutlet private weak var ratingLabel: UILabel!
     
-    func configure(_ item: MovieDetailsItem) {
+    override func prepareForReuse() {
+        posterImageView.image = nil
+    }
+    
+    func configure(_ item: TableViewCellItem) {
         guard let item = item as? GeneralMovieDetailsItem else {
             return
         }
@@ -27,14 +33,7 @@ class GeneralMovieDetailsTableViewCell: UITableViewCell, ConfigurableTableViewCe
         releaseDateLabel.text = item.releaseDate
         languageLabel.text = item.language
         ratingLabel.text = item.rating
-        
-        loadImage(for: item)
+        posterImageView.loadPoster(with: item.posterPath)
     }
     
-    private func loadImage(for movie: GeneralMovieDetailsItem) {
-        let dataStore = LocalDataStore()
-        if let url = dataStore.apiConfig?.images?.secureBaseUrl, let path = movie.posterPath {
-            posterImageView.kf.setImage(with: url.appendingPosterPath(path, quality: .medium))
-        }
-    }
 }

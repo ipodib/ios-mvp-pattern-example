@@ -13,5 +13,6 @@ protocol ConfigurableTableViewCell {
     /// Configure cell with given item
     ///
     /// - Parameter item: Instance of item.
-    func configure(_ item: MovieDetailsItem)
+    func configure(_ item: TableViewCellItem)
+
 }
