@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000DAD832125C4B20073D3A0 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000DAD822125C4B20073D3A0 /* Localization.swift */; };
+		000DAD852125C51E0073D3A0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 000DAD842125C51E0073D3A0 /* Localizable.strings */; };
 		00668E10211FD71D009DE8A2 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00668E0F211FD71D009DE8A2 /* SearchTableViewController.swift */; };
 		00668E13211FD908009DE8A2 /* SearchContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00668E12211FD908009DE8A2 /* SearchContract.swift */; };
 		00668E16211FD95E009DE8A2 /* BasePresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00668E15211FD95E009DE8A2 /* BasePresenterImpl.swift */; };
@@ -73,6 +75,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		000DAD822125C4B20073D3A0 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		000DAD842125C51E0073D3A0 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		00668E0F211FD71D009DE8A2 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		00668E12211FD908009DE8A2 /* SearchContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContract.swift; sourceTree = "<group>"; };
 		00668E15211FD95E009DE8A2 /* BasePresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenterImpl.swift; sourceTree = "<group>"; };
@@ -156,6 +160,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		000DAD812125C4A20073D3A0 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				000DAD822125C4B20073D3A0 /* Localization.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		00668E0D211FD6F9009DE8A2 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +288,7 @@
 				00850E5E211CF6B200A16FA4 /* AppDelegate.swift */,
 				00850E65211CF6B300A16FA4 /* Assets.xcassets */,
 				00850E6A211CF6B300A16FA4 /* Info.plist */,
+				000DAD842125C51E0073D3A0 /* Localizable.strings */,
 			);
 			path = "ios-mvp-pattern-example";
 			sourceTree = "<group>";
@@ -354,6 +367,7 @@
 		009854EF2125ACE500077991 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				000DAD812125C4A20073D3A0 /* Localization */,
 				009854F32125B23F00077991 /* Extensions */,
 				009854F02125ACF600077991 /* Configurable Cell */,
 			);
@@ -557,6 +571,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00668E20212316D8009DE8A2 /* Main.storyboard in Resources */,
+				000DAD852125C51E0073D3A0 /* Localizable.strings in Resources */,
 				00850E69211CF6B300A16FA4 /* LaunchScreen.storyboard in Resources */,
 				00850E66211CF6B300A16FA4 /* Assets.xcassets in Resources */,
 				00850E64211CF6B200A16FA4 /* Root.storyboard in Resources */,
@@ -699,6 +714,7 @@
 				00668E18211FD9AF009DE8A2 /* BaseContract.swift in Sources */,
 				00850E88211E324300A16FA4 /* CacheRequests.swift in Sources */,
 				00668E10211FD71D009DE8A2 /* SearchTableViewController.swift in Sources */,
+				000DAD832125C4B20073D3A0 /* Localization.swift in Sources */,
 				00668E1D211FE68D009DE8A2 /* SearchResultTableViewCell.swift in Sources */,
 				00E4E31D21245A340015058A /* MovieCollection.swift in Sources */,
 				00E4E31A212459070015058A /* SpokenLanguage.swift in Sources */,
@@ -802,7 +818,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -856,7 +872,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;

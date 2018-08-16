@@ -28,11 +28,11 @@ class GeneralMovieDetailsItem: TableViewCellItem {
         language = data.originalLanguage
         
         if let runtime = data.runtime {
-            duration = "\(runtime) min"
+            duration = "\(runtime) \(Localization.MovieDetails.minutes)"
         }
         
         if let voteAverage = data.voteAverage {
-            rating = "\(voteAverage)/10"
+            rating = "\(voteAverage)/\(Constants.Common.maxRating)"
         }
     }
     

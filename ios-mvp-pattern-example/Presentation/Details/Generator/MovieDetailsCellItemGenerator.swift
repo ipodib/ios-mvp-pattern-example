@@ -23,14 +23,14 @@ class MovieDetailsCellItemGenerator: TableViewCellItemGenerator {
     }
     
     private func createGeneralSections(_ data: MovieDetails) -> [TableViewSection] {
-        return [TableViewSection("General", [GeneralMovieDetailsItem(data)])]
+        return [TableViewSection(Localization.MovieDetails.general, [GeneralMovieDetailsItem(data)])]
     }
     
     private func createOverviewSections(_ data: MovieDetails) -> [TableViewSection] {
         guard let overview = data.overview else {
             return []
         }
-        return [TableViewSection("Overview", [MovieInfoDetailsItem(overview)])]
+        return [TableViewSection(Localization.MovieDetails.overview, [MovieInfoDetailsItem(overview)])]
     }
     
     private func createGenresSections(_ data: MovieDetails) -> [TableViewSection] {
@@ -40,7 +40,7 @@ class MovieDetailsCellItemGenerator: TableViewCellItemGenerator {
         
         let genresString = genres.compactMap { $0.name }.joined(separator: ", ")
         
-        return [TableViewSection("Genres", [MovieInfoDetailsItem(genresString)])]
+        return [TableViewSection(Localization.MovieDetails.genres, [MovieInfoDetailsItem(genresString)])]
     }
     
     private func createSpokenLanguagesSections(_ data: MovieDetails) -> [TableViewSection] {
@@ -50,7 +50,7 @@ class MovieDetailsCellItemGenerator: TableViewCellItemGenerator {
         
         let items = languages.compactMap { MovieInfoDetailsItem($0.name) }
         
-        return [TableViewSection("Spoken Languages", items)]
+        return [TableViewSection(Localization.MovieDetails.spokenLanguages, items)]
     }
     
     private func createProductionCompanies(_ data: MovieDetails) -> [TableViewSection] {
@@ -60,7 +60,7 @@ class MovieDetailsCellItemGenerator: TableViewCellItemGenerator {
         
         let items = companies.compactMap { MovieInfoDetailsItem($0.name) }
         
-        return [TableViewSection("Production Companies", items)]
+        return [TableViewSection(Localization.MovieDetails.productionCompanies, items)]
     }
     
 }

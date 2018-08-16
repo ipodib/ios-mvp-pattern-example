@@ -15,4 +15,8 @@ struct Constants {
         static let apiKey = "71110fd79defd8b3003b6c7983235ffa"
     }
     
+    struct Common {
+        static let maxRating = 10
+    }
+    
 }
