@@ -1,4 +1,3 @@
-
 //
 //  MovieDetailsSection.swift
 //  ios-mvp-pattern-example

@@ -108,12 +108,12 @@
         <scene sceneID="EfZ-zl-aQQ">
             <objects>
                 <tableViewController title="Details" id="4nC-VU-Jhl" customClass="MovieDetailsTableViewController" customModule="ios_mvp_pattern_example" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="8ol-Xl-Z0y">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="8ol-Xl-Z0y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="P11-7f-Gp3">
-                            <rect key="frame" x="0.0" y="276.5" width="375" height="0.0"/>
+                            <rect key="frame" x="0.0" y="320.5" width="375" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
@@ -214,11 +214,13 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="svC-Gn-4DW" firstAttribute="centerY" secondItem="PzS-It-8LU" secondAttribute="centerY" id="4a7-xI-mFR"/>
+                                        <constraint firstItem="svC-Gn-4DW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ybj-mN-TfL" secondAttribute="top" constant="16" id="6to-FK-wfV"/>
                                         <constraint firstAttribute="trailing" secondItem="svC-Gn-4DW" secondAttribute="trailing" constant="16" id="8V0-gW-va6"/>
-                                        <constraint firstItem="PzS-It-8LU" firstAttribute="top" secondItem="Ybj-mN-TfL" secondAttribute="top" constant="16" id="hyW-hJ-fYW"/>
-                                        <constraint firstAttribute="bottom" secondItem="PzS-It-8LU" secondAttribute="bottom" constant="16.5" id="sfs-eU-Vi7"/>
-                                        <constraint firstItem="PzS-It-8LU" firstAttribute="leading" secondItem="Ybj-mN-TfL" secondAttribute="leading" constant="16" id="wwX-de-lOR"/>
+                                        <constraint firstItem="PzS-It-8LU" firstAttribute="leading" secondItem="Ybj-mN-TfL" secondAttribute="leading" constant="16" id="9zS-t8-csJ"/>
+                                        <constraint firstItem="PzS-It-8LU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ybj-mN-TfL" secondAttribute="top" priority="750" constant="16" id="Dny-Gq-7KQ"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="PzS-It-8LU" secondAttribute="bottom" priority="750" constant="16.5" id="sfs-eU-Vi7"/>
                                         <constraint firstItem="svC-Gn-4DW" firstAttribute="leading" secondItem="PzS-It-8LU" secondAttribute="trailing" constant="8" id="xSF-xY-hFk"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="svC-Gn-4DW" secondAttribute="bottom" constant="16" id="zUc-F7-aX4"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -229,6 +231,24 @@
                                     <outlet property="releaseDateLabel" destination="YEH-Lo-MGI" id="eGn-rj-Bpo"/>
                                     <outlet property="titleLabel" destination="upf-wH-UQb" id="MJF-Kp-omC"/>
                                 </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextContentTableViewCell" textLabel="U2g-gt-Bp5" style="IBUITableViewCellStyleDefault" id="HW5-p5-LB7" customClass="TextContentTableViewCell" customModule="ios_mvp_pattern_example" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="238.5" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HW5-p5-LB7" id="iRR-2y-FlZ" customClass="TextContentTableViewCell" customModule="ios_mvp_pattern_example" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U2g-gt-Bp5">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <string key="text">A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground \"fight clubs\" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>

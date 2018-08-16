@@ -11,13 +11,56 @@ import Foundation
 class MovieDetailsCellItemGenerator: TableViewCellItemGenerator {
     
     func generate(from data: MovieDetails) -> [TableViewSection] {
-        let general = TableViewSection("General", [GeneralMovieDetailsItem(data)])
-        let overview = TableViewSection("Overview", [])
-        let genres = TableViewSection("Genres", [])
-        let languages = TableViewSection("Spoken Languages", [])
-        let companies = TableViewSection("Production Companies", [])
+        var sections = [TableViewSection]()
         
-        return [general, overview, genres, languages, companies]
+        sections.append(contentsOf: createGeneralSections(data))
+        sections.append(contentsOf: createOverviewSections(data))
+        sections.append(contentsOf: createGenresSections(data))
+        sections.append(contentsOf: createSpokenLanguagesSections(data))
+        sections.append(contentsOf: createProductionCompanies(data))
+        
+        return sections
+    }
+    
+    private func createGeneralSections(_ data: MovieDetails) -> [TableViewSection] {
+        return [TableViewSection("General", [GeneralMovieDetailsItem(data)])]
+    }
+    
+    private func createOverviewSections(_ data: MovieDetails) -> [TableViewSection] {
+        guard let overview = data.overview else {
+            return []
+        }
+        return [TableViewSection("Overview", [MovieInfoDetailsItem(overview)])]
+    }
+    
+    private func createGenresSections(_ data: MovieDetails) -> [TableViewSection] {
+        guard let genres = data.genres, !genres.isEmpty else {
+            return []
+        }
+        
+        let genresString = genres.compactMap { $0.name }.joined(separator: ", ")
+        
+        return [TableViewSection("Genres", [MovieInfoDetailsItem(genresString)])]
+    }
+    
+    private func createSpokenLanguagesSections(_ data: MovieDetails) -> [TableViewSection] {
+        guard let languages = data.spokenLanguages, !languages.isEmpty else {
+            return []
+        }
+        
+        let items = languages.compactMap { MovieInfoDetailsItem($0.name) }
+        
+        return [TableViewSection("Spoken Languages", items)]
+    }
+    
+    private func createProductionCompanies(_ data: MovieDetails) -> [TableViewSection] {
+        guard let companies = data.productionCompanies, !companies.isEmpty else {
+            return []
+        }
+        
+        let items = companies.compactMap { MovieInfoDetailsItem($0.name) }
+        
+        return [TableViewSection("Production Companies", items)]
     }
     
 }

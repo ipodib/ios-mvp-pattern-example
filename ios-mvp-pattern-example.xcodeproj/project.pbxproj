@@ -46,6 +46,8 @@
 		009854F82125B46900077991 /* MovieDetailsCellItemGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009854F72125B46900077991 /* MovieDetailsCellItemGenerator.swift */; };
 		009854FA2125B48000077991 /* TableViewCellItemGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009854F92125B48000077991 /* TableViewCellItemGenerator.swift */; };
 		009854FC2125B57700077991 /* TableViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009854FB2125B57700077991 /* TableViewSection.swift */; };
+		009854FE2125BA7800077991 /* MovieInfoDetailsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009854FD2125BA7800077991 /* MovieInfoDetailsItem.swift */; };
+		009855002125BB1300077991 /* TextContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009854FF2125BB1300077991 /* TextContentTableViewCell.swift */; };
 		00E4E30A212456B90015058A /* MoviesDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4E309212456B90015058A /* MoviesDataProvider.swift */; };
 		00E4E30C2124573E0015058A /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4E30B2124573E0015058A /* MovieDetails.swift */; };
 		00E4E313212457D30015058A /* GenreDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4E312212457D30015058A /* GenreDetails.swift */; };
@@ -114,6 +116,8 @@
 		009854F72125B46900077991 /* MovieDetailsCellItemGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsCellItemGenerator.swift; sourceTree = "<group>"; };
 		009854F92125B48000077991 /* TableViewCellItemGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellItemGenerator.swift; sourceTree = "<group>"; };
 		009854FB2125B57700077991 /* TableViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSection.swift; sourceTree = "<group>"; };
+		009854FD2125BA7800077991 /* MovieInfoDetailsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoDetailsItem.swift; sourceTree = "<group>"; };
+		009854FF2125BB1300077991 /* TextContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextContentTableViewCell.swift; sourceTree = "<group>"; };
 		00E4E309212456B90015058A /* MoviesDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDataProvider.swift; sourceTree = "<group>"; };
 		00E4E30B2124573E0015058A /* MovieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetails.swift; sourceTree = "<group>"; };
 		00E4E312212457D30015058A /* GenreDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreDetails.swift; sourceTree = "<group>"; };
@@ -433,6 +437,7 @@
 			isa = PBXGroup;
 			children = (
 				00E4E31F212469590015058A /* GeneralMovieDetailsTableViewCell.swift */,
+				009854FF2125BB1300077991 /* TextContentTableViewCell.swift */,
 			);
 			path = "Table View Cells";
 			sourceTree = "<group>";
@@ -441,6 +446,7 @@
 			isa = PBXGroup;
 			children = (
 				00E4E32621246A700015058A /* GeneralMovieDetailsItem.swift */,
+				009854FD2125BA7800077991 /* MovieInfoDetailsItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -668,6 +674,7 @@
 				00850E87211E324300A16FA4 /* DataProvider.swift in Sources */,
 				00E4E30A212456B90015058A /* MoviesDataProvider.swift in Sources */,
 				00668E4B212455C5009DE8A2 /* MoviesRouter.swift in Sources */,
+				009854FE2125BA7800077991 /* MovieInfoDetailsItem.swift in Sources */,
 				00E4E316212458260015058A /* ProductionCompany.swift in Sources */,
 				00668E462124549D009DE8A2 /* MovieDetailsContract.swift in Sources */,
 				00E4E320212469590015058A /* GeneralMovieDetailsTableViewCell.swift in Sources */,
@@ -685,6 +692,7 @@
 				009854F52125B25A00077991 /* UIImageView+ImageLoader.swift in Sources */,
 				00850E96211E419F00A16FA4 /* Constants.swift in Sources */,
 				00850E89211E324300A16FA4 /* ApiRouterProtocol.swift in Sources */,
+				009855002125BB1300077991 /* TextContentTableViewCell.swift in Sources */,
 				00668E31212319F5009DE8A2 /* ImageConfig.swift in Sources */,
 				00668E2D212318DF009DE8A2 /* ConfigurationDataProvider.swift in Sources */,
 				009854F22125AFAF00077991 /* TableViewCellItem.swift in Sources */,
