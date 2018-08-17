@@ -11,6 +11,7 @@ import UIKit
 class MovieDetailsTableViewController: UITableViewController {
 
     var movieId: Int!
+    var injector: Injector!
     
     private var presenter: MovieDetailsPresenter?
     private var activituIndicator: UIActivityIndicatorView?
@@ -19,6 +20,7 @@ class MovieDetailsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
+        injector = Injector()
         presenter = MovieDetailsPresenterImpl(self, MoviesDataProvider(), movieId)
         presenter?.loadMovieDetails()
     }
@@ -26,7 +28,6 @@ class MovieDetailsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return sections.count
     }
 
@@ -48,6 +49,8 @@ class MovieDetailsTableViewController: UITableViewController {
         }
         return cell
     }
+    
+    // MAKR: - Private
     
     private func configureView() {
         activituIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)

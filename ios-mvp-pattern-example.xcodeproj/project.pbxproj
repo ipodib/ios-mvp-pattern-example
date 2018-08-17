@@ -63,6 +63,14 @@
 		00E4E32721246A700015058A /* GeneralMovieDetailsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4E32621246A700015058A /* GeneralMovieDetailsItem.swift */; };
 		00E4E32921246B160015058A /* ConfigurableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4E32821246B160015058A /* ConfigurableTableViewCell.swift */; };
 		8397E5EDB13E440F8A2D7557 /* Pods_ios_mvp_pattern_example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C49B5B1401ADBBA3B042E6 /* Pods_ios_mvp_pattern_example.framework */; };
+		D20C51352126D4A800AF4F15 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C51342126D4A800AF4F15 /* Injector.swift */; };
+		D20C513A2126D9A000AF4F15 /* RedirectPresenterImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C51392126D9A000AF4F15 /* RedirectPresenterImplTests.swift */; };
+		D20C513D2126D9E900AF4F15 /* RedirectViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C513C2126D9E900AF4F15 /* RedirectViewMock.swift */; };
+		D20C51422126DAF500AF4F15 /* ConfigurationDataProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C51412126DAF500AF4F15 /* ConfigurationDataProviderMock.swift */; };
+		D20C51452126DC3500AF4F15 /* api_configuration.json in Resources */ = {isa = PBXBuildFile; fileRef = D20C51442126DC3500AF4F15 /* api_configuration.json */; };
+		D20C51482126DCB000AF4F15 /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C51472126DCB000AF4F15 /* JSONLoader.swift */; };
+		D20C514A2126E22400AF4F15 /* InjectorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C51492126E22400AF4F15 /* InjectorMock.swift */; };
+		D20C514C2126E27700AF4F15 /* RedirectViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C514B2126E27700AF4F15 /* RedirectViewControllerTests.swift */; };
 		DAA1F58E165715C9E136AF67 /* Pods_ios_mvp_pattern_exampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E2C1FF29CEF585A41B07728 /* Pods_ios_mvp_pattern_exampleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -140,6 +148,14 @@
 		48C49B5B1401ADBBA3B042E6 /* Pods_ios_mvp_pattern_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_mvp_pattern_example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		857FADF8DC565FDB762A5A81 /* Pods-ios-mvp-pattern-example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-mvp-pattern-example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-mvp-pattern-example/Pods-ios-mvp-pattern-example.release.xcconfig"; sourceTree = "<group>"; };
 		8E2C1FF29CEF585A41B07728 /* Pods_ios_mvp_pattern_exampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_mvp_pattern_exampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D20C51342126D4A800AF4F15 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
+		D20C51392126D9A000AF4F15 /* RedirectPresenterImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedirectPresenterImplTests.swift; sourceTree = "<group>"; };
+		D20C513C2126D9E900AF4F15 /* RedirectViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedirectViewMock.swift; sourceTree = "<group>"; };
+		D20C51412126DAF500AF4F15 /* ConfigurationDataProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationDataProviderMock.swift; sourceTree = "<group>"; };
+		D20C51442126DC3500AF4F15 /* api_configuration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = api_configuration.json; sourceTree = "<group>"; };
+		D20C51472126DCB000AF4F15 /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
+		D20C51492126E22400AF4F15 /* InjectorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectorMock.swift; sourceTree = "<group>"; };
+		D20C514B2126E27700AF4F15 /* RedirectViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedirectViewControllerTests.swift; sourceTree = "<group>"; };
 		D902FBE2CAF9CA76B26C2B46 /* Pods-ios-mvp-pattern-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-mvp-pattern-example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-mvp-pattern-example/Pods-ios-mvp-pattern-example.debug.xcconfig"; sourceTree = "<group>"; };
 		ECD29619194534CBAE3A6366 /* Pods-ios-mvp-pattern-exampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-mvp-pattern-exampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-mvp-pattern-exampleTests/Pods-ios-mvp-pattern-exampleTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -318,6 +334,8 @@
 		00850E75211CFA3500A16FA4 /* ios-mvp-pattern-exampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				D20C51462126DC9F00AF4F15 /* Test Utils */,
+				D20C51362126D96900AF4F15 /* Presentation */,
 				00850E76211CFA3500A16FA4 /* ios_mvp_pattern_exampleTests.swift */,
 				00850E78211CFA3500A16FA4 /* Info.plist */,
 			);
@@ -392,6 +410,7 @@
 				000DAD812125C4A20073D3A0 /* Localization */,
 				009854F32125B23F00077991 /* Extensions */,
 				009854F02125ACF600077991 /* Configurable Cell */,
+				D20C51342126D4A800AF4F15 /* Injector.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -507,6 +526,59 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D20C51362126D96900AF4F15 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				D20C51432126DC0800AF4F15 /* JSON Examples */,
+				D20C513F2126DAD600AF4F15 /* Mocks */,
+				D20C51382126D97800AF4F15 /* Redirect */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		D20C51382126D97800AF4F15 /* Redirect */ = {
+			isa = PBXGroup;
+			children = (
+				D20C513B2126D9D900AF4F15 /* Mocks */,
+				D20C51392126D9A000AF4F15 /* RedirectPresenterImplTests.swift */,
+				D20C514B2126E27700AF4F15 /* RedirectViewControllerTests.swift */,
+			);
+			path = Redirect;
+			sourceTree = "<group>";
+		};
+		D20C513B2126D9D900AF4F15 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D20C513C2126D9E900AF4F15 /* RedirectViewMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D20C513F2126DAD600AF4F15 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D20C51412126DAF500AF4F15 /* ConfigurationDataProviderMock.swift */,
+				D20C51492126E22400AF4F15 /* InjectorMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D20C51432126DC0800AF4F15 /* JSON Examples */ = {
+			isa = PBXGroup;
+			children = (
+				D20C51442126DC3500AF4F15 /* api_configuration.json */,
+			);
+			path = "JSON Examples";
+			sourceTree = "<group>";
+		};
+		D20C51462126DC9F00AF4F15 /* Test Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D20C51472126DCB000AF4F15 /* JSONLoader.swift */,
+			);
+			path = "Test Utils";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -604,6 +676,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D20C51452126DC3500AF4F15 /* api_configuration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -736,6 +809,7 @@
 				00668E2D212318DF009DE8A2 /* ConfigurationDataProvider.swift in Sources */,
 				009854F22125AFAF00077991 /* TableViewCellItem.swift in Sources */,
 				00668E18211FD9AF009DE8A2 /* BaseContract.swift in Sources */,
+				D20C51352126D4A800AF4F15 /* Injector.swift in Sources */,
 				00850E88211E324300A16FA4 /* CacheRequests.swift in Sources */,
 				00668E10211FD71D009DE8A2 /* SearchTableViewController.swift in Sources */,
 				000DAD832125C4B20073D3A0 /* Localization.swift in Sources */,
@@ -757,6 +831,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D20C514C2126E27700AF4F15 /* RedirectViewControllerTests.swift in Sources */,
+				D20C51482126DCB000AF4F15 /* JSONLoader.swift in Sources */,
+				D20C514A2126E22400AF4F15 /* InjectorMock.swift in Sources */,
+				D20C513A2126D9A000AF4F15 /* RedirectPresenterImplTests.swift in Sources */,
+				D20C51422126DAF500AF4F15 /* ConfigurationDataProviderMock.swift in Sources */,
+				D20C513D2126D9E900AF4F15 /* RedirectViewMock.swift in Sources */,
 				00850E77211CFA3500A16FA4 /* ios_mvp_pattern_exampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

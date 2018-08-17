@@ -12,15 +12,19 @@ class SearchTableViewController: UITableViewController {
 
     @IBOutlet private weak var searchTitleLabel: UILabel!
     
+    var injector = Injector()
+    
     private let searchController = UISearchController(searchResultsController: nil)
-    private var presenter: SearchPresenter?
+    private var presenter: SearchPresenter!
     private var searchResults = [SearchResultItem]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = SearchPresenterImpl(self, SearchDataProvider())
+        presenter = SearchPresenterImpl(self, injector.providerSearchDataProvider())
         configureSearchController()
     }
+    
+    // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.searchResults.count
@@ -34,6 +38,8 @@ class SearchTableViewController: UITableViewController {
         return cell
     }
     
+    // MARK: - Segue
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let selection = tableView.indexPathsForSelectedRows?.first else {
             return
@@ -44,6 +50,8 @@ class SearchTableViewController: UITableViewController {
             viewController?.movieId = id
         }
     }
+    
+    // MARK: - Private
     
     private func configureSearchController() {
         searchController.searchResultsUpdater = self
