@@ -10,12 +10,15 @@ import UIKit
 
 class RedirectViewController: UIViewController {
     
+    var injector: Injector!
+    
     private var presenter: RedirectPresenter?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = RedirectPresenterImpl(self, ConfigurationDataProvider(),
-                                          dataStore: LocalDataStore())
+        injector = Injector()
+        presenter = RedirectPresenterImpl(self, injector.provideConfigurationDataProvider(),
+                                          dataStore: injector.provideLocalDataStore())
         presenter?.loadConfiguration()
     }
     
