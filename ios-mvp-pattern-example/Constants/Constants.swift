@@ -12,7 +12,7 @@ struct Constants {
     
     struct API {
         static let baseUrl = URL(string: "https://api.themoviedb.org/3/")!
-        static let apiKey = "71110fd79defd8b3003b6c7983235ffa"
+        static let apiKey = "put_your_api_key_here"
     }
     
     struct Common {
