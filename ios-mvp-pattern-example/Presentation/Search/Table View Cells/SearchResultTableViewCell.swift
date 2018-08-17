@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class SearchResultTableViewCell: UITableViewCell {
+class SearchResultTableViewCell: UITableViewCell, ConfigurableTableViewCell {
 
     static let cellIdentifier = "SearchResultTableViewCell"
     
@@ -17,21 +17,18 @@ class SearchResultTableViewCell: UITableViewCell {
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var posterImageView: UIImageView!
 
-    func configure(with movie: Movie) {
-        titleLabel.text = movie.title
-        descriptionLabel.text = movie.overview
-        loadImage(for: movie)
+    func configure(_ item: TableViewCellItem) {
+        guard let item = item as? SearchResultItem else {
+            return
+        }
         
+        titleLabel.text = item.title
+        descriptionLabel.text = item.overview
+        posterImageView.loadPoster(with: item.posterPath)
     }
     
     override func prepareForReuse() {
         posterImageView.image = nil
     }
     
-    private func loadImage(for movie: Movie) {
-        let dataStore = LocalDataStore()
-        if let url = dataStore.apiConfig?.images?.secureBaseUrl, let path = movie.posterPath {
-            posterImageView.kf.setImage(with: url.appendingPosterPath(path, quality: .medium))
-        }
-    }
 }

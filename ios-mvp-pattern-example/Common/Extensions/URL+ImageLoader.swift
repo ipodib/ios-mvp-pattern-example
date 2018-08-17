@@ -10,6 +10,12 @@ import Foundation
 
 extension URL {
     
+    /// Generate full image url using path and required image quality.
+    ///
+    /// - Parameters:
+    ///   - path: Image path.
+    ///   - quality: Image quality.
+    /// - Returns: Full image url.
     func appendingPosterPath(_ path: String, quality: ImageQuality) -> URL {
         return appendingPathComponent(quality.rawValue).appendingPathComponent(path)
     }

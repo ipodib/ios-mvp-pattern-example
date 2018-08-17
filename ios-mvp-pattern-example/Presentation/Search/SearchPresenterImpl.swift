@@ -11,9 +11,11 @@ import Foundation
 class SearchPresenterImpl<T: SearchView>: BasePresenterImpl<T>, SearchPresenter {
     
     private let dataProvider: SearchDataProvider
+    private let resultsGenerator: SearchResultsCellItemGenerator
     
     init(_ view: T, _ dataProvider: SearchDataProvider) {
         self.dataProvider = dataProvider
+        self.resultsGenerator = SearchResultsCellItemGenerator()
         super.init(view)
     }
     
@@ -27,7 +29,7 @@ class SearchPresenterImpl<T: SearchView>: BasePresenterImpl<T>, SearchPresenter 
     
     private func didReceiveSearchResults(result: SearchResult?, error: Error?) {
         guard let results = result?.results, error == nil else {
-            view?.displaySearchInfo(message: "Unable to execute search query")
+            view?.displaySearchInfo(message: Localization.Search.unableToExecuteQuery)
             return
         }
         
@@ -35,7 +37,7 @@ class SearchPresenterImpl<T: SearchView>: BasePresenterImpl<T>, SearchPresenter 
     }
     
     private func display(movies: [Movie]) {
-        view?.displaySearchInfo(message: "Found \(movies.count) movies.")
-        view?.display(movies: movies)
+        view?.displaySearchInfo(message: String(format: Localization.Search.foundMoviesCountFormat, "\(movies.count)"))
+        view?.display(results: resultsGenerator.generate(from: movies))
     }
 }

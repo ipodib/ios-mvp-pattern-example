@@ -14,7 +14,7 @@ class SearchTableViewController: UITableViewController {
     
     private let searchController = UISearchController(searchResultsController: nil)
     private var presenter: SearchPresenter?
-    private var movies = [Movie]()
+    private var searchResults = [SearchResultItem]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,19 +23,32 @@ class SearchTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.movies.count
+        return self.searchResults.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: SearchResultTableViewCell.cellIdentifier, for: indexPath) as! SearchResultTableViewCell
-        cell.configure(with: movies[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: SearchResultTableViewCell.cellIdentifier, for: indexPath)
+        if let cell = cell as? ConfigurableTableViewCell {
+            cell.configure(searchResults[indexPath.row])
+        }
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let selection = tableView.indexPathsForSelectedRows?.first else {
+            return
+        }
+        
+        if let id = searchResults[selection.row].id, segue.identifier == "showMovieDetailsSegue" {
+            let viewController = segue.destination as? MovieDetailsTableViewController
+            viewController?.movieId = id
+        }
     }
     
     private func configureSearchController() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search"
+        searchController.searchBar.placeholder = Localization.Search.search
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
@@ -53,8 +66,8 @@ extension SearchTableViewController: UISearchResultsUpdating {
 
 extension SearchTableViewController: SearchView {
     
-    func display(movies: [Movie]) {
-        self.movies = movies
+    func display(results: [SearchResultItem]) {
+        self.searchResults = results
         tableView.reloadData()
     }
     
