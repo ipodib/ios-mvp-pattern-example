@@ -12,3 +12,6 @@
 "spoken_languages_title" = "Spoken Languages";
 "production_companies" = "Production Companies";
 "minutes" = "min";
+"search" = "Search";
+"unable_to_execute_query" = "Unable to execute search query";
+"found_movies" = "Found %@ movies.";

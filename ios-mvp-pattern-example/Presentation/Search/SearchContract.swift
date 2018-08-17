@@ -12,8 +12,8 @@ protocol SearchView: BaseView {
 
     /// Display list of movies.
     ///
-    /// - Parameter movies: List of movies.
-    func display(movies: [Movie])
+    /// - Parameter results: List of movies.
+    func display(results: [SearchResultItem])
     
     /// Display search results info.
     ///

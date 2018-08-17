@@ -10,6 +10,12 @@ import Foundation
 
 struct Localization {
     
+    struct Search {
+        static let search = NSLocalizedString("search", comment: "")
+        static let unableToExecuteQuery = NSLocalizedString("unable_to_execute_query", comment: "")
+        static let foundMoviesCountFormat = NSLocalizedString("found_movies", comment: "")
+    }
+    
     struct MovieDetails {
         static let general = NSLocalizedString("general_title", comment: "")
         static let overview = NSLocalizedString("overview_title", comment: "")

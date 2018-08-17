@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		000DAD832125C4B20073D3A0 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000DAD822125C4B20073D3A0 /* Localization.swift */; };
 		000DAD852125C51E0073D3A0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 000DAD842125C51E0073D3A0 /* Localizable.strings */; };
+		000DAD882126473A0073D3A0 /* SearchResultItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000DAD872126473A0073D3A0 /* SearchResultItem.swift */; };
+		000DAD8B212647E70073D3A0 /* SearchResultsCellItemGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000DAD8A212647E70073D3A0 /* SearchResultsCellItemGenerator.swift */; };
 		00668E10211FD71D009DE8A2 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00668E0F211FD71D009DE8A2 /* SearchTableViewController.swift */; };
 		00668E13211FD908009DE8A2 /* SearchContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00668E12211FD908009DE8A2 /* SearchContract.swift */; };
 		00668E16211FD95E009DE8A2 /* BasePresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00668E15211FD95E009DE8A2 /* BasePresenterImpl.swift */; };
@@ -77,6 +79,8 @@
 /* Begin PBXFileReference section */
 		000DAD822125C4B20073D3A0 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		000DAD842125C51E0073D3A0 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		000DAD872126473A0073D3A0 /* SearchResultItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultItem.swift; sourceTree = "<group>"; };
+		000DAD8A212647E70073D3A0 /* SearchResultsCellItemGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsCellItemGenerator.swift; sourceTree = "<group>"; };
 		00668E0F211FD71D009DE8A2 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		00668E12211FD908009DE8A2 /* SearchContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContract.swift; sourceTree = "<group>"; };
 		00668E15211FD95E009DE8A2 /* BasePresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenterImpl.swift; sourceTree = "<group>"; };
@@ -168,6 +172,22 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		000DAD862126470B0073D3A0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				000DAD872126473A0073D3A0 /* SearchResultItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		000DAD89212647C70073D3A0 /* Generator */ = {
+			isa = PBXGroup;
+			children = (
+				000DAD8A212647E70073D3A0 /* SearchResultsCellItemGenerator.swift */,
+			);
+			path = Generator;
+			sourceTree = "<group>";
+		};
 		00668E0D211FD6F9009DE8A2 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +202,8 @@
 		00668E0E211FD707009DE8A2 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				000DAD89212647C70073D3A0 /* Generator */,
+				000DAD862126470B0073D3A0 /* Models */,
 				00668E1B211FE66B009DE8A2 /* Table View Cells */,
 				00668E0F211FD71D009DE8A2 /* SearchTableViewController.swift */,
 				00668E12211FD908009DE8A2 /* SearchContract.swift */,
@@ -681,9 +703,11 @@
 			files = (
 				00E4E32921246B160015058A /* ConfigurableTableViewCell.swift in Sources */,
 				00668E3E21232C34009DE8A2 /* URL+ImageLoader.swift in Sources */,
+				000DAD8B212647E70073D3A0 /* SearchResultsCellItemGenerator.swift in Sources */,
 				00850E93211E3E4200A16FA4 /* SearchResult.swift in Sources */,
 				00668E16211FD95E009DE8A2 /* BasePresenterImpl.swift in Sources */,
 				00850E8E211E3AB400A16FA4 /* SearchDataProvider.swift in Sources */,
+				000DAD882126473A0073D3A0 /* SearchResultItem.swift in Sources */,
 				009854FA2125B48000077991 /* TableViewCellItemGenerator.swift in Sources */,
 				00E4E313212457D30015058A /* GenreDetails.swift in Sources */,
 				00850E87211E324300A16FA4 /* DataProvider.swift in Sources */,

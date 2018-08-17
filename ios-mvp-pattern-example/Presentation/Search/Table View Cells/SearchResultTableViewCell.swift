@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class SearchResultTableViewCell: UITableViewCell {
+class SearchResultTableViewCell: UITableViewCell, ConfigurableTableViewCell {
 
     static let cellIdentifier = "SearchResultTableViewCell"
     
@@ -17,10 +17,14 @@ class SearchResultTableViewCell: UITableViewCell {
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var posterImageView: UIImageView!
 
-    func configure(with movie: Movie) {
-        titleLabel.text = movie.title
-        descriptionLabel.text = movie.overview
-        posterImageView.loadPoster(with: movie.posterPath)
+    func configure(_ item: TableViewCellItem) {
+        guard let item = item as? SearchResultItem else {
+            return
+        }
+        
+        titleLabel.text = item.title
+        descriptionLabel.text = item.overview
+        posterImageView.loadPoster(with: item.posterPath)
     }
     
     override func prepareForReuse() {
