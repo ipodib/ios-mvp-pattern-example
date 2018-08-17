@@ -21,4 +21,5 @@ class Injector {
     func providerSearchDataProvider() -> SearchDataProvider {
         return SearchDataProvider()
     }
+    
 }
