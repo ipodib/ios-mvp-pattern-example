@@ -76,6 +76,7 @@
 		D20C515B2127061F00AF4F15 /* SearchPresenterImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C515A2127061F00AF4F15 /* SearchPresenterImplTests.swift */; };
 		D20C515E2127067300AF4F15 /* SearchViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C515D2127067300AF4F15 /* SearchViewMock.swift */; };
 		D20C51602127078A00AF4F15 /* search_results.json in Resources */ = {isa = PBXBuildFile; fileRef = D20C515F2127078A00AF4F15 /* search_results.json */; };
+		D20C516421270C3600AF4F15 /* SearchTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C516321270C3600AF4F15 /* SearchTableViewControllerTests.swift */; };
 		DAA1F58E165715C9E136AF67 /* Pods_ios_mvp_pattern_exampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E2C1FF29CEF585A41B07728 /* Pods_ios_mvp_pattern_exampleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -166,6 +167,7 @@
 		D20C515A2127061F00AF4F15 /* SearchPresenterImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterImplTests.swift; sourceTree = "<group>"; };
 		D20C515D2127067300AF4F15 /* SearchViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewMock.swift; sourceTree = "<group>"; };
 		D20C515F2127078A00AF4F15 /* search_results.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = search_results.json; sourceTree = "<group>"; };
+		D20C516321270C3600AF4F15 /* SearchTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewControllerTests.swift; sourceTree = "<group>"; };
 		D902FBE2CAF9CA76B26C2B46 /* Pods-ios-mvp-pattern-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-mvp-pattern-example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-mvp-pattern-example/Pods-ios-mvp-pattern-example.debug.xcconfig"; sourceTree = "<group>"; };
 		ECD29619194534CBAE3A6366 /* Pods-ios-mvp-pattern-exampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-mvp-pattern-exampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-mvp-pattern-exampleTests/Pods-ios-mvp-pattern-exampleTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -598,6 +600,7 @@
 				D20C515C2127066000AF4F15 /* Mocks */,
 				D20C51502127013000AF4F15 /* Generator */,
 				D20C515A2127061F00AF4F15 /* SearchPresenterImplTests.swift */,
+				D20C516321270C3600AF4F15 /* SearchTableViewControllerTests.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -874,6 +877,7 @@
 			files = (
 				D20C51522127015400AF4F15 /* SearchResultsCellItemConvertorTests.swift in Sources */,
 				D20C514C2126E27700AF4F15 /* RedirectViewControllerTests.swift in Sources */,
+				D20C516421270C3600AF4F15 /* SearchTableViewControllerTests.swift in Sources */,
 				D20C51482126DCB000AF4F15 /* JSONLoader.swift in Sources */,
 				D20C515B2127061F00AF4F15 /* SearchPresenterImplTests.swift in Sources */,
 				D20C515E2127067300AF4F15 /* SearchViewMock.swift in Sources */,

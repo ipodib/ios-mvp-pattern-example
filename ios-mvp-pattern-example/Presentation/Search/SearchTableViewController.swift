@@ -10,7 +10,7 @@ import UIKit
 
 class SearchTableViewController: UITableViewController {
 
-    @IBOutlet private weak var searchTitleLabel: UILabel!
+    @IBOutlet private(set) weak var searchTitleLabel: UILabel!
     
     var injector = Injector()
     
@@ -27,7 +27,7 @@ class SearchTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.searchResults.count
+        return searchResults.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -41,14 +41,14 @@ class SearchTableViewController: UITableViewController {
     // MARK: - Segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let selection = tableView.indexPathsForSelectedRows?.first else {
+        guard let selection = tableView.indexPathsForSelectedRows?.first,
+            let id = searchResults[selection.row].id,
+            segue.identifier == "showMovieDetailsSegue" else {
             return
         }
         
-        if let id = searchResults[selection.row].id, segue.identifier == "showMovieDetailsSegue" {
-            let viewController = segue.destination as? MovieDetailsTableViewController
-            viewController?.movieId = id
-        }
+        let viewController = segue.destination as? MovieDetailsTableViewController
+        viewController?.movieId = id
     }
     
     // MARK: - Private
@@ -75,7 +75,7 @@ extension SearchTableViewController: UISearchResultsUpdating {
 extension SearchTableViewController: SearchView {
     
     func display(results: [SearchResultItem]) {
-        self.searchResults = results
+        searchResults = results
         tableView.reloadData()
     }
     

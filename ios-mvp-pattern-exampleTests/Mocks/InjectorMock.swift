@@ -15,4 +15,8 @@ class InjectorMock: Injector {
         return ConfigurationDataProviderMock()
     }
     
+    override func providerSearchDataProvider() -> SearchDataProvider {
+        return SearchDataProviderMock()
+    }
+    
 }
