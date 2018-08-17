@@ -8,9 +8,9 @@
 
 import Foundation
 
-class MovieDetailsCellItemGenerator: TableViewCellItemGenerator {
+class MovieDetailsCellItemGenerator: TableViewCellItemConverter {
     
-    func generate(from data: MovieDetails) -> [TableViewSection] {
+    func convert(from data: MovieDetails) -> [TableViewSection] {
         var sections = [TableViewSection]()
         
         sections.append(contentsOf: createGeneralSections(data))

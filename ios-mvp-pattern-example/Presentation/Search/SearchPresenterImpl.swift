@@ -11,11 +11,11 @@ import Foundation
 class SearchPresenterImpl<T: SearchView>: BasePresenterImpl<T>, SearchPresenter {
     
     private let dataProvider: SearchDataProvider
-    private let resultsGenerator: SearchResultsCellItemGenerator
+    private let resultsConvertor: SearchResultsCellItemConvertor
     
     init(_ view: T, _ dataProvider: SearchDataProvider) {
         self.dataProvider = dataProvider
-        self.resultsGenerator = SearchResultsCellItemGenerator()
+        self.resultsConvertor = SearchResultsCellItemConvertor()
         super.init(view)
     }
     
@@ -38,6 +38,6 @@ class SearchPresenterImpl<T: SearchView>: BasePresenterImpl<T>, SearchPresenter 
     
     private func display(movies: [Movie]) {
         view?.displaySearchInfo(message: String(format: Localization.Search.foundMoviesCountFormat, "\(movies.count)"))
-        view?.display(results: resultsGenerator.generate(from: movies))
+        view?.display(results: resultsConvertor.convert(from: movies))
     }
 }

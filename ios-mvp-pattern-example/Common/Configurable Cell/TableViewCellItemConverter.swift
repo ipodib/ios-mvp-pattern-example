@@ -1,5 +1,5 @@
 //
-//  TableViewCellItemGenerator.swift
+//  TableViewCellItemConverter.swift
 //  ios-mvp-pattern-example
 //
 //  Created by Ivan Podibka on 16/08/2018.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol TableViewCellItemGenerator {
+protocol TableViewCellItemConverter {
     
     associatedtype Data
     associatedtype Item
@@ -17,6 +17,6 @@ protocol TableViewCellItemGenerator {
     ///
     /// - Parameter data: Data to be converted.
     /// - Returns: List of items.
-    func generate(from data: Data) -> [Item]
+    func convert(from data: Data) -> [Item]
     
 }

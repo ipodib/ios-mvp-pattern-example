@@ -1,0 +1,118 @@
+{
+  "page": 1,
+  "total_results": 6,
+  "total_pages": 1,
+  "results": [
+    {
+      "vote_count": 11547,
+      "id": 13,
+      "video": false,
+      "vote_average": 8.4,
+      "title": "Forrest Gump",
+      "popularity": 25.629,
+      "poster_path": "/yE5d3BUhE8hCnkMUJOo1QDoOGNz.jpg",
+      "original_language": "en",
+      "original_title": "Forrest Gump",
+      "genre_ids": [
+        35,
+        18,
+        10749
+      ],
+      "backdrop_path": "/7c9UVPPiTPltouxRVY6N9uugaVA.jpg",
+      "adult": false,
+      "overview": "A man with a low IQ has accomplished great things in his life and been present during significant historic events - in each case, far exceeding what anyone imagined he could do. Yet, despite all the things he has attained, his one true love eludes him. 'Forrest Gump' is the story of a man who rose above his challenges, and who proved that determination, courage, and love are more important than ability.",
+      "release_date": "1994-07-06"
+    },
+    {
+      "vote_count": 1395,
+      "id": 73723,
+      "video": false,
+      "vote_average": 6.3,
+      "title": "The Lorax",
+      "popularity": 18.924,
+      "poster_path": "/6FuYtjegxaUv7n7C733hUEOQytR.jpg",
+      "original_language": "en",
+      "original_title": "The Lorax",
+      "genre_ids": [
+        16,
+        10751
+      ],
+      "backdrop_path": "/7CuXAFUWcOlR5kt07ln1fZDxdHX.jpg",
+      "adult": false,
+      "overview": "A 12-year-old boy searches for the one thing that will enable him to win the affection of the girl of his dreams. To find it he must discover the story of the Lorax, the grumpy yet charming creature who fights to protect his world.",
+      "release_date": "2012-03-01"
+    },
+    {
+      "vote_count": 18,
+      "id": 63988,
+      "video": false,
+      "vote_average": 3.4,
+      "title": "Forest Warrior",
+      "popularity": 0.737,
+      "poster_path": "/26GyJZxvZwz10leu5LZfl4AnMGP.jpg",
+      "original_language": "en",
+      "original_title": "Forest Warrior",
+      "genre_ids": [
+        28,
+        10751
+      ],
+      "backdrop_path": "/rX7oODyZn3fiWNUET4RYSw1Ew9Q.jpg",
+      "adult": false,
+      "overview": "John McKenna is a spiritual being who is able to transform into bear, wolf or eagle. He lives in the forests of Tanglewood and has dedicated his life to protect them. One day a gang of evil lumberjacks led by Travis Thorne arrive Tanglewood to chop the forest down. McKenna cannot let this happen, and together with his new friends - Lords of the Tanglewood, a band of children who love to play in the forest - he battles against Thorne and his evil gang.",
+      "release_date": "1996-11-05"
+    },
+    {
+      "vote_count": 2,
+      "id": 422460,
+      "video": false,
+      "vote_average": 8,
+      "title": "Guards of the Forest",
+      "popularity": 0.09,
+      "poster_path": "/dzlIUU10FMTUAD7Bsoyuj2e0guE.jpg",
+      "original_language": "en",
+      "original_title": "Meža sargi",
+      "genre_ids": [
+        10751,
+        16
+      ],
+      "backdrop_path": null,
+      "adult": false,
+      "overview": "A man continues to throw rubbish into the forest, to the great annoyance of both the forest ranger and the forest animals, but when he refuses to stop, more drastic measures have to come into use – and this is where the forest ranger luckily gets the help of a dog, a cat and a mouse, who have had enough of the litter lout.",
+      "release_date": "2015-10-18"
+    },
+    {
+      "vote_count": 1,
+      "id": 91995,
+      "video": false,
+      "vote_average": 8.5,
+      "title": "Maxime Le Forestier-Plutot Guitare",
+      "popularity": 0.038,
+      "poster_path": "/tOkLBxCxxRQXMtIxPjzH4FDvKwc.jpg",
+      "original_language": "fr",
+      "original_title": "Maxime Le Forestier-Plutot Guitare",
+      "genre_ids": [],
+      "backdrop_path": "/qQPQKirTfVFmLFncE36qaEIRcDB.jpg",
+      "adult": false,
+      "overview": "",
+      "release_date": "2002-10-14"
+    },
+    {
+      "vote_count": 1,
+      "id": 148621,
+      "video": false,
+      "vote_average": 1,
+      "title": "Forest Guard",
+      "popularity": 0.036,
+      "poster_path": "/l5if4oRBIR3fGMZ91hunz2ebwtb.jpg",
+      "original_language": "en",
+      "original_title": "Eger",
+      "genre_ids": [
+        28
+      ],
+      "backdrop_path": null,
+      "adult": false,
+      "overview": "In the hunting lodge on the outskirts of one-of-a-kind natural reserve lives game warden, Vasily Klintsov (Igor Lifanov), a young former captain from the special task force. A rich German businessman, in the company of the governor, comes to the nearby small town for hunting. Wild boar hunting is a risky and dangerous business. In addition, as ill luck would have it, a very dangerous criminal escapes from the closely located nearby maximum security penal colony. The hunt should be canceled. But the stakes for the bureaucrats are too high - the 'money bag' is prepared to invest in several large projects. Relying on the traditional Russian blind trust in sheer luck, the governor gives his OK for the hunt.",
+      "release_date": ""
+    }
+  ]
+}

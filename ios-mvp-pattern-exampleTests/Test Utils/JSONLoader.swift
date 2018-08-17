@@ -15,6 +15,14 @@ class JSONLoader {
         return APIConfiguration(JSONString: loadJSONString(name: "api_configuration"))
     }
     
+    class func loadMovie() -> Movie? {
+        return Movie(JSONString: loadJSONString(name: "movie"))
+    }
+    
+    class func loadSearchResults() -> SearchResult? {
+        return SearchResult(JSONString: loadJSONString(name: "search_results"))
+    }
+    
     class func loadJSONString(name: String) -> String {
         let bundle = Bundle(for: self)
         let path = bundle.path(forResource: name, ofType: "json")
