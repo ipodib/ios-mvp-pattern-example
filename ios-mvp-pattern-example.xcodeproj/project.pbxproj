@@ -36,7 +36,6 @@
 		00850E64211CF6B200A16FA4 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00850E62211CF6B200A16FA4 /* Root.storyboard */; };
 		00850E66211CF6B300A16FA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00850E65211CF6B300A16FA4 /* Assets.xcassets */; };
 		00850E69211CF6B300A16FA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00850E67211CF6B300A16FA4 /* LaunchScreen.storyboard */; };
-		00850E77211CFA3500A16FA4 /* ios_mvp_pattern_exampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00850E76211CFA3500A16FA4 /* ios_mvp_pattern_exampleTests.swift */; };
 		00850E87211E324300A16FA4 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00850E82211E324300A16FA4 /* DataProvider.swift */; };
 		00850E88211E324300A16FA4 /* CacheRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00850E83211E324300A16FA4 /* CacheRequests.swift */; };
 		00850E89211E324300A16FA4 /* ApiRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00850E85211E324300A16FA4 /* ApiRouterProtocol.swift */; };
@@ -117,7 +116,6 @@
 		00850E68211CF6B300A16FA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00850E6A211CF6B300A16FA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00850E74211CFA3500A16FA4 /* ios-mvp-pattern-exampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-mvp-pattern-exampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		00850E76211CFA3500A16FA4 /* ios_mvp_pattern_exampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_mvp_pattern_exampleTests.swift; sourceTree = "<group>"; };
 		00850E78211CFA3500A16FA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00850E82211E324300A16FA4 /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		00850E83211E324300A16FA4 /* CacheRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheRequests.swift; sourceTree = "<group>"; };
@@ -334,9 +332,10 @@
 		00850E75211CFA3500A16FA4 /* ios-mvp-pattern-exampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				D20C513F2126DAD600AF4F15 /* Mocks */,
+				D20C51432126DC0800AF4F15 /* JSON Examples */,
 				D20C51462126DC9F00AF4F15 /* Test Utils */,
 				D20C51362126D96900AF4F15 /* Presentation */,
-				00850E76211CFA3500A16FA4 /* ios_mvp_pattern_exampleTests.swift */,
 				00850E78211CFA3500A16FA4 /* Info.plist */,
 			);
 			path = "ios-mvp-pattern-exampleTests";
@@ -529,8 +528,6 @@
 		D20C51362126D96900AF4F15 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				D20C51432126DC0800AF4F15 /* JSON Examples */,
-				D20C513F2126DAD600AF4F15 /* Mocks */,
 				D20C51382126D97800AF4F15 /* Redirect */,
 			);
 			path = Presentation;
@@ -837,7 +834,6 @@
 				D20C513A2126D9A000AF4F15 /* RedirectPresenterImplTests.swift in Sources */,
 				D20C51422126DAF500AF4F15 /* ConfigurationDataProviderMock.swift in Sources */,
 				D20C513D2126D9E900AF4F15 /* RedirectViewMock.swift in Sources */,
-				00850E77211CFA3500A16FA4 /* ios_mvp_pattern_exampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
