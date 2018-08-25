@@ -28,4 +28,7 @@ protocol MovieDetailsPresenter {
     /// Initate loading movie details.
     func loadMovieDetails()
     
+    /// Add current movie to favorites
+    func addToFavorites()
+    
 }

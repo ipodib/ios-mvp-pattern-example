@@ -21,8 +21,15 @@ class MovieDetailsTableViewController: UITableViewController {
         super.viewDidLoad()
         configureView()
         injector = Injector()
-        presenter = MovieDetailsPresenterImpl(self, MoviesDataProvider(), movieId)
+        presenter = MovieDetailsPresenterImpl(self, MoviesDataProvider(), movieId,
+                                              FavoritesRepository(container: CoreDataContainer.default))
         presenter?.loadMovieDetails()
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        presenter?.addToFavorites()
     }
 
     // MARK: - Table view data source

@@ -8,10 +8,11 @@
 
 import Foundation
 import ObjectMapper
+import CoreData
 
 class MovieCollection: Mappable {
     
-    var id: Int?
+    var id: Int!
     var name: String?
     var posterPath: String?
     var backdropPath: String?
@@ -23,6 +24,19 @@ class MovieCollection: Mappable {
         id <- map["id"]
         name <- map["poster_path"]
         backdropPath <- map["backdrop_path"]
+    }
+    
+}
+
+extension MovieCollection: CoreDataMapping {
+    
+    func mapToManagedObject(with context: NSManagedObjectContext) -> CRMovieCollection {
+        let object: CRMovieCollection = context.insertObject()
+        object.id = Double(id)
+        object.name = name
+        object.posterPath = posterPath
+        object.backdropPath = backdropPath
+        return object
     }
     
 }
