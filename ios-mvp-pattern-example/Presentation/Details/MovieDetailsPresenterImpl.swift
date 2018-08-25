@@ -29,7 +29,7 @@ class MovieDetailsPresenterImpl<T: MovieDetailsView>: BasePresenterImpl<T>, Movi
     private func movieDetailsLoaded(_ details: MovieDetails?, _ error: Error?) {
         view?.hideLoadingProgress()
         if let details = details {
-            view?.display(sections: detailsGenerator.generate(from: details))
+            view?.display(sections: detailsGenerator.convert(from: details))
         }
         
     }

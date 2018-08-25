@@ -13,9 +13,9 @@ class SearchResultTableViewCell: UITableViewCell, ConfigurableTableViewCell {
 
     static let cellIdentifier = "SearchResultTableViewCell"
     
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var descriptionLabel: UILabel!
-    @IBOutlet private weak var posterImageView: UIImageView!
+    @IBOutlet private(set) weak var titleLabel: UILabel!
+    @IBOutlet private(set) weak var descriptionLabel: UILabel!
+    @IBOutlet private(set) weak var posterImageView: UIImageView!
 
     func configure(_ item: TableViewCellItem) {
         guard let item = item as? SearchResultItem else {
