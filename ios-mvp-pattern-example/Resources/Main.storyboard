@@ -256,6 +256,13 @@
                             <outlet property="delegate" destination="4nC-VU-Jhl" id="2xM-qg-7Tw"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="BSD-in-AXA">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="UHC-D1-Z3e">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="4nC-VU-Jhl" id="FdT-ou-PCQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="atN-GC-zDZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

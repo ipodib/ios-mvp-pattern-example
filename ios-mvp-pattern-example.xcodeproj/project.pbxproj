@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000CAF6D21321AA500970A9C /* FavoritesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000CAF6C21321AA500970A9C /* FavoritesRepository.swift */; };
+		000CAF7221321AB000970A9C /* NSManagedObjectContext+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000CAF6E21321AAF00970A9C /* NSManagedObjectContext+Create.swift */; };
+		000CAF7321321AB000970A9C /* CoreDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000CAF6F21321AAF00970A9C /* CoreDataContainer.swift */; };
+		000CAF7421321AB000970A9C /* CoreDataMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000CAF7021321AAF00970A9C /* CoreDataMapping.swift */; };
+		000CAF7521321AB000970A9C /* NSPersistentContainer+Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000CAF7121321AAF00970A9C /* NSPersistentContainer+Load.swift */; };
+		000CAF7621321ACC00970A9C /* StorageModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0028ED8B2131F23800816FFE /* StorageModel.xcdatamodeld */; };
 		000DAD832125C4B20073D3A0 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000DAD822125C4B20073D3A0 /* Localization.swift */; };
 		000DAD852125C51E0073D3A0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 000DAD842125C51E0073D3A0 /* Localizable.strings */; };
 		000DAD882126473A0073D3A0 /* SearchResultItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000DAD872126473A0073D3A0 /* SearchResultItem.swift */; };
@@ -91,6 +97,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		000CAF6C21321AA500970A9C /* FavoritesRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesRepository.swift; sourceTree = "<group>"; };
+		000CAF6E21321AAF00970A9C /* NSManagedObjectContext+Create.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Create.swift"; sourceTree = "<group>"; };
+		000CAF6F21321AAF00970A9C /* CoreDataContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataContainer.swift; sourceTree = "<group>"; };
+		000CAF7021321AAF00970A9C /* CoreDataMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataMapping.swift; sourceTree = "<group>"; };
+		000CAF7121321AAF00970A9C /* NSPersistentContainer+Load.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSPersistentContainer+Load.swift"; sourceTree = "<group>"; };
 		000DAD822125C4B20073D3A0 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		000DAD842125C51E0073D3A0 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		000DAD872126473A0073D3A0 /* SearchResultItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultItem.swift; sourceTree = "<group>"; };
@@ -216,6 +227,26 @@
 			path = Generator;
 			sourceTree = "<group>";
 		};
+		0028CAC72131FB3F00A90583 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				000CAF6C21321AA500970A9C /* FavoritesRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		0028ED8A2131F21100816FFE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				000CAF6F21321AAF00970A9C /* CoreDataContainer.swift */,
+				000CAF7021321AAF00970A9C /* CoreDataMapping.swift */,
+				000CAF6E21321AAF00970A9C /* NSManagedObjectContext+Create.swift */,
+				000CAF7121321AAF00970A9C /* NSPersistentContainer+Load.swift */,
+				0028ED8B2131F23800816FFE /* StorageModel.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		00668E0D211FD6F9009DE8A2 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +311,8 @@
 		00668E3921232A3D009DE8A2 /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				0028CAC72131FB3F00A90583 /* Repositories */,
+				0028ED8A2131F21100816FFE /* CoreData */,
 				00668E3A21232A4E009DE8A2 /* LocalDataStore.swift */,
 			);
 			path = Store;
@@ -827,10 +860,14 @@
 				000DAD882126473A0073D3A0 /* SearchResultItem.swift in Sources */,
 				009854FA2125B48000077991 /* TableViewCellItemConverter.swift in Sources */,
 				00E4E313212457D30015058A /* GenreDetails.swift in Sources */,
+				000CAF7521321AB000970A9C /* NSPersistentContainer+Load.swift in Sources */,
+				000CAF7421321AB000970A9C /* CoreDataMapping.swift in Sources */,
 				00850E87211E324300A16FA4 /* DataProvider.swift in Sources */,
 				00E4E30A212456B90015058A /* MoviesDataProvider.swift in Sources */,
 				00668E4B212455C5009DE8A2 /* MoviesRouter.swift in Sources */,
 				009854FE2125BA7800077991 /* MovieInfoDetailsItem.swift in Sources */,
+				000CAF7621321ACC00970A9C /* StorageModel.xcdatamodeld in Sources */,
+				000CAF6D21321AA500970A9C /* FavoritesRepository.swift in Sources */,
 				00E4E316212458260015058A /* ProductionCompany.swift in Sources */,
 				00668E462124549D009DE8A2 /* MovieDetailsContract.swift in Sources */,
 				00E4E320212469590015058A /* GeneralMovieDetailsTableViewCell.swift in Sources */,
@@ -845,9 +882,11 @@
 				00E4E32721246A700015058A /* GeneralMovieDetailsItem.swift in Sources */,
 				00668E3B21232A4E009DE8A2 /* LocalDataStore.swift in Sources */,
 				009854FC2125B57700077991 /* TableViewSection.swift in Sources */,
+				000CAF7321321AB000970A9C /* CoreDataContainer.swift in Sources */,
 				009854F52125B25A00077991 /* UIImageView+ImageLoader.swift in Sources */,
 				00850E96211E419F00A16FA4 /* Constants.swift in Sources */,
 				00850E89211E324300A16FA4 /* ApiRouterProtocol.swift in Sources */,
+				000CAF7221321AB000970A9C /* NSManagedObjectContext+Create.swift in Sources */,
 				009855002125BB1300077991 /* TextContentTableViewCell.swift in Sources */,
 				00668E31212319F5009DE8A2 /* ImageConfig.swift in Sources */,
 				00668E2D212318DF009DE8A2 /* ConfigurationDataProvider.swift in Sources */,
@@ -1146,6 +1185,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0028ED8B2131F23800816FFE /* StorageModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+			);
+			path = StorageModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 00850E53211CF6B200A16FA4 /* Project object */;
 }

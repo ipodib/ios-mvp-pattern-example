@@ -8,6 +8,7 @@
 
 import Foundation
 import ObjectMapper
+import CoreData
 
 class SpokenLanguage: Mappable {
     
@@ -20,6 +21,17 @@ class SpokenLanguage: Mappable {
     func mapping(map: Map) {
         name <- map["name"]
         iso639_1 <- map["iso_639_1"]
+    }
+    
+}
+
+extension SpokenLanguage: CoreDataMapping {
+    
+    func mapToManagedObject(with context: NSManagedObjectContext) -> CRSpokenLanguage {
+        let object: CRSpokenLanguage = context.insertObject()
+        object.name = name
+        object.iso639_1 = name
+        return object
     }
     
 }

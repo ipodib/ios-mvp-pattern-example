@@ -8,10 +8,11 @@
 
 import Foundation
 import ObjectMapper
+import CoreData
 
 class ProductionCompany: Mappable {
     
-    var id: String?
+    var id: Int!
     var logoPath: String?
     var name: String?
     var originCountry: String?
@@ -26,4 +27,17 @@ class ProductionCompany: Mappable {
         name <- map["name"]
         originCountry <- map["origin_country"]
     }
+}
+
+extension ProductionCompany: CoreDataMapping {
+    
+    func mapToManagedObject(with context: NSManagedObjectContext) -> CRProductionCompany {
+        let object: CRProductionCompany = context.insertObject()
+        object.id = Double(id)
+        object.logoPath = logoPath
+        object.name = name
+        object.originCountry = originCountry
+        return object
+    }
+    
 }
