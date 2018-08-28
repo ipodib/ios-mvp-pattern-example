@@ -21,6 +21,16 @@ protocol MovieDetailsView: BaseView {
     /// - Parameter sections: List of sections with items.
     func display(sections: [TableViewSection])
     
+    /// Display alert with message.
+    ///
+    /// - Parameter message: Message text.
+    func display(message: String)
+    
+    /// Show or hide add to favorites button.
+    ///
+    /// - Parameter visible: Visibility flag.
+    func displayFavoritesAs(hidden: Bool)
+
 }
 
 protocol MovieDetailsPresenter {
@@ -30,5 +40,8 @@ protocol MovieDetailsPresenter {
     
     /// Add current movie to favorites
     func addToFavorites()
+    
+    /// Remove from favorites
+    func removeFromFavorites()
     
 }

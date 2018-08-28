@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -95,7 +96,13 @@
                             <outlet property="delegate" destination="tib-xv-kqz" id="1tw-iZ-BBw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Search" id="8vS-Sv-XfQ"/>
+                    <navigationItem key="navigationItem" title="Search" id="8vS-Sv-XfQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="Rhh-6E-cJZ">
+                            <connections>
+                                <segue destination="M9K-4h-fmM" kind="show" identifier="showFavoritesSegue" id="FyE-hC-Sw7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchTitleLabel" destination="iHK-dv-MVZ" id="uAM-EN-BGV"/>
                     </connections>
@@ -103,6 +110,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nNB-a6-kEt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1916" y="144.3778110944528"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="8Xj-Ab-3dp">
+            <objects>
+                <tableViewController id="M9K-4h-fmM" customClass="FavoriteMoviesTableViewController" customModule="ios_mvp_pattern_example" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vt1-H1-orq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="HO1-5T-bAY">
+                            <rect key="frame" x="0.0" y="118" width="375" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoriteMovieTableViewCell" rowHeight="90" id="EUf-Ci-Cq4" customClass="FavoriteMovieTableViewCell" customModule="ios_mvp_pattern_example" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EUf-Ci-Cq4" id="Vle-02-kQG">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VyF-Ji-gm5">
+                                            <rect key="frame" x="16" y="9" width="60" height="70"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="oOb-Sj-inl"/>
+                                                <constraint firstAttribute="height" constant="70" id="sey-Sg-O7I"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avengers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MkK-Ej-ioS">
+                                            <rect key="frame" x="92" y="9" width="267" height="70"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="MkK-Ej-ioS" firstAttribute="leading" secondItem="VyF-Ji-gm5" secondAttribute="trailing" constant="16" id="Bnj-UU-EhO"/>
+                                        <constraint firstItem="VyF-Ji-gm5" firstAttribute="top" secondItem="Vle-02-kQG" secondAttribute="top" constant="9" id="KvA-ed-Tlu"/>
+                                        <constraint firstAttribute="trailing" secondItem="MkK-Ej-ioS" secondAttribute="trailing" constant="16" id="SaE-d2-i96"/>
+                                        <constraint firstItem="MkK-Ej-ioS" firstAttribute="top" secondItem="VyF-Ji-gm5" secondAttribute="top" id="e3j-g9-GEg"/>
+                                        <constraint firstItem="VyF-Ji-gm5" firstAttribute="bottom" secondItem="MkK-Ej-ioS" secondAttribute="bottom" id="pkt-Je-9Zt"/>
+                                        <constraint firstAttribute="bottom" secondItem="VyF-Ji-gm5" secondAttribute="bottom" constant="10" id="psd-UB-7Ke"/>
+                                        <constraint firstItem="VyF-Ji-gm5" firstAttribute="leading" secondItem="Vle-02-kQG" secondAttribute="leading" constant="16" id="ujl-uz-fHH"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="posterImageView" destination="VyF-Ji-gm5" id="VgY-ux-EOr"/>
+                                    <outlet property="titleLabel" destination="MkK-Ej-ioS" id="ZDg-gy-THF"/>
+                                    <segue destination="4nC-VU-Jhl" kind="show" identifier="showMovieDetailsSegue" id="EWn-xU-GLd"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="M9K-4h-fmM" id="PCZ-0X-OlR"/>
+                            <outlet property="delegate" destination="M9K-4h-fmM" id="gzt-bP-25D"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Favorites" id="F3Y-qy-VVf"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0AD-6K-RqX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1916" y="868.51574212893559"/>
         </scene>
         <!--Details-->
         <scene sceneID="EfZ-zl-aQQ">
@@ -257,12 +327,23 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="BSD-in-AXA">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="UHC-D1-Z3e">
-                            <connections>
-                                <action selector="saveButtonPressed:" destination="4nC-VU-Jhl" id="FdT-ou-PCQ"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" systemItem="save" id="coL-tJ-eeT">
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="4nC-VU-Jhl" id="nNb-nO-3IL"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem style="plain" systemItem="trash" id="IFp-is-XuN">
+                                <connections>
+                                    <action selector="removeButtonPressed:" destination="4nC-VU-Jhl" id="a1V-AK-WPJ"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addToFavoritesButton" destination="coL-tJ-eeT" id="qjX-cW-bFN"/>
+                        <outlet property="removeFromFavoritesButton" destination="IFp-is-XuN" id="bgF-bN-4G6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="atN-GC-zDZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -287,4 +368,7 @@
             <point key="canvasLocation" x="976.79999999999995" y="144.3778110944528"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="EWn-xU-GLd"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -17,12 +17,15 @@ class MovieDetailsTableViewController: UITableViewController {
     private var activituIndicator: UIActivityIndicatorView?
     private var sections = [TableViewSection]()
     
+    @IBOutlet private var addToFavoritesButton: UIBarButtonItem!
+    @IBOutlet private var removeFromFavoritesButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
         injector = Injector()
         presenter = MovieDetailsPresenterImpl(self, MoviesDataProvider(), movieId,
-                                              FavoritesRepository(container: CoreDataContainer.default))
+                                              injector.provideFavoritesRepository())
         presenter?.loadMovieDetails()
     }
     
@@ -30,6 +33,10 @@ class MovieDetailsTableViewController: UITableViewController {
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         presenter?.addToFavorites()
+    }
+    
+    @IBAction func removeButtonPressed(_ sender: UIBarButtonItem) {
+        presenter?.removeFromFavorites()
     }
 
     // MARK: - Table view data source
@@ -81,5 +88,15 @@ extension MovieDetailsTableViewController: MovieDetailsView {
     func display(sections: [TableViewSection]) {
         self.sections = sections
         tableView.reloadData()
+    }
+    
+    func display(message: String) {
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func displayFavoritesAs(hidden: Bool) {
+        navigationItem.rightBarButtonItems = hidden ? [removeFromFavoritesButton] : [addToFavoritesButton]
     }
 }
