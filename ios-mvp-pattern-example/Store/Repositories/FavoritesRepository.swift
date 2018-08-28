@@ -36,16 +36,7 @@ class FavoritesRepository {
     /// - Parameter id: Movie id.
     /// - Returns: Movie details managed object.
     func fetch(by id: Int) -> MovieDetails? {
-        do {
-            let request = CRMovieDetails.fetchRequest(by: id)
-            return try container.viewContext
-                .fetch(request)
-                .first
-                .map { $0.asMappable() }
-        } catch {
-            print(error.localizedDescription)
-        }
-        return nil
+        return fetch(by: id, with: container.viewContext).map { $0.asMappable() }
     }
     
     /// Store movie in favorites.
@@ -59,6 +50,29 @@ class FavoritesRepository {
         }
     }
     
+    /// Remove movie from favorites
+    ///
+    /// - Parameter id: Movie id.
+    func remove(by id: Int) {
+        let context = container.writeContext
+        context.perform { [weak self] in
+            guard let object = self?.fetch(by: id, with: context) else {
+                return
+            }
+            context.delete(object)
+            context.saveOrRollback()
+        }
+    }
+    
+    private func fetch(by id: Int, with context: NSManagedObjectContext) -> CRMovieDetails? {
+        do {
+            let request = CRMovieDetails.fetchRequest(by: id)
+            return try context.fetch(request).first
+        } catch {
+            print(error.localizedDescription)
+        }
+        return nil
+    }
 }
 
 private extension CRMovieDetails {

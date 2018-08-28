@@ -23,6 +23,7 @@ struct Localization {
         static let spokenLanguages = NSLocalizedString("spoken_languages_title", comment: "")
         static let productionCompanies = NSLocalizedString("production_companies", comment: "")
         static let minutes = NSLocalizedString("minutes", comment: "")
+        static let addedToFavoritesMessage = NSLocalizedString("added_to_favorites", comment: "")
     }
     
 }

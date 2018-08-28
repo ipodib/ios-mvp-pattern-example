@@ -15,3 +15,4 @@
 "search" = "Search";
 "unable_to_execute_query" = "Unable to execute search query";
 "found_movies" = "Found %@ movies.";
+"added_to_favorites" = "Successfully added to favorites!";

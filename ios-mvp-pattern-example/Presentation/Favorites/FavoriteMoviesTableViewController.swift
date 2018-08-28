@@ -19,6 +19,10 @@ class FavoriteMoviesTableViewController: UITableViewController {
         super.viewDidLoad()
         injector = Injector()
         presenter = FavoriteMoviePresenterImpl(self, injector.provideFavoritesRepository())
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         presenter?.loadFavorites()
     }
     

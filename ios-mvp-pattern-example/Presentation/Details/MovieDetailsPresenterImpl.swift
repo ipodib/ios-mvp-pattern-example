@@ -22,6 +22,7 @@ class MovieDetailsPresenterImpl<T: MovieDetailsView>: BasePresenterImpl<T>, Movi
         self.detailsGenerator = MovieDetailsCellItemConvertor()
         self.repository = repository
         super.init(view)
+        updateFavoritesState()
     }
     
     func loadMovieDetails() {
@@ -33,7 +34,16 @@ class MovieDetailsPresenterImpl<T: MovieDetailsView>: BasePresenterImpl<T>, Movi
         guard let movie = movieDetails else {
             return
         }
+        
         repository.add(movie)
+        
+        view?.display(message: Localization.MovieDetails.addedToFavoritesMessage)
+        view?.displayFavoritesAs(hidden: true)
+    }
+    
+    func removeFromFavorites() {
+        repository.remove(by: movieId)
+        view?.displayFavoritesAs(hidden: false)
     }
     
     private func movieDetailsLoaded(_ details: MovieDetails?, _ error: Error?) {
@@ -41,6 +51,14 @@ class MovieDetailsPresenterImpl<T: MovieDetailsView>: BasePresenterImpl<T>, Movi
         if let details = details {
             movieDetails = details
             view?.display(sections: detailsGenerator.convert(from: details))
+        }
+    }
+    
+    private func updateFavoritesState() {
+        if let _ = repository.fetch(by: movieId) {
+            view?.displayFavoritesAs(hidden: true)
+        } else {
+            view?.displayFavoritesAs(hidden: false)
         }
     }
     
