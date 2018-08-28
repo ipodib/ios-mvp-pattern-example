@@ -22,7 +22,7 @@ class MovieDetailsTableViewController: UITableViewController {
         configureView()
         injector = Injector()
         presenter = MovieDetailsPresenterImpl(self, MoviesDataProvider(), movieId,
-                                              FavoritesRepository(container: CoreDataContainer.default))
+                                              injector.provideFavoritesRepository())
         presenter?.loadMovieDetails()
     }
     

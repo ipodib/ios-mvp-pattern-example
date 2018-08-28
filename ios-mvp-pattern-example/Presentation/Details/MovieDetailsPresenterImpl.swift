@@ -12,14 +12,14 @@ class MovieDetailsPresenterImpl<T: MovieDetailsView>: BasePresenterImpl<T>, Movi
     
     private let dataProvider: MoviesDataProvider
     private let movieId: Int
-    private let detailsGenerator: MovieDetailsCellItemGenerator
+    private let detailsGenerator: MovieDetailsCellItemConvertor
     private let repository: FavoritesRepository
     private var movieDetails: MovieDetails?
     
     init(_ view: T, _ dataProvider: MoviesDataProvider, _ movieId: Int, _ repository: FavoritesRepository) {
         self.dataProvider = dataProvider
         self.movieId = movieId
-        self.detailsGenerator = MovieDetailsCellItemGenerator()
+        self.detailsGenerator = MovieDetailsCellItemConvertor()
         self.repository = repository
         super.init(view)
     }
@@ -42,7 +42,6 @@ class MovieDetailsPresenterImpl<T: MovieDetailsView>: BasePresenterImpl<T>, Movi
             movieDetails = details
             view?.display(sections: detailsGenerator.convert(from: details))
         }
-        
     }
     
 }

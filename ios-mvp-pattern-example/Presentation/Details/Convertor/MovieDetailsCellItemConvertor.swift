@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MovieDetailsCellItemGenerator: TableViewCellItemConverter {
+class MovieDetailsCellItemConvertor: TableViewCellItemConverter {
     
     func convert(from data: MovieDetails) -> [TableViewSection] {
         var sections = [TableViewSection]()
